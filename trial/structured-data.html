@@ -1,0 +1,76 @@
+<!-- Structured Data (JSON-LD) for Trial Page -->
+<!-- これを trial/index.html の </head> の直前に追加してください -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "戦略MGマネジメントゲーム® 1日経営体験研修",
+  "description": "マネジメントゲームで経営と会計を体感的に学ぶ1日研修。個人参加可能、会計知識不要。",
+  "image": "https://page.gensparksite.com/v1/base64_upload/b330dcd7ed3132f1021847cba9399320",
+  "organizer": {
+    "@type": "Organization",
+    "name": "Smart & Smooth",
+    "url": "https://smartandsmooth.com"
+  },
+  "performer": {
+    "@type": "Person",
+    "name": "剱持 健",
+    "jobTitle": "公認会計士 / 戦略MGマネジメントゲーム認定インストラクター"
+  },
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "Place",
+    "name": "貸会議室（東京・京都）",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "JP"
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "10000",
+    "priceCurrency": "JPY",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2024-01-01"
+  },
+  "isAccessibleForFree": false
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "ホーム",
+    "item": "https://smartandsmooth.com/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "マネジメントゲーム体験",
+    "item": "https://smartandsmooth.com/trial/"
+  }]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "戦略MGマネジメントゲーム® 1日経営体験研修",
+  "description": "マネジメントゲームで経営と会計を体験し、実務に活かせるスキルを習得します。",
+  "provider": {
+    "@type": "Organization",
+    "name": "Smart & Smooth"
+  },
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "onsite",
+    "duration": "PT8H30M"
+  }
+}
+</script>
