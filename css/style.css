@@ -1454,8 +1454,79 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     section {
+        padding: 3rem 0;
+    }
+    
+    .programs {
+        overflow-x: hidden;
+    }
+    
+    .container {
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+    
+    /* プログラムカードのスマホ対応 */
+    .programs-grid {
+        gap: 2rem;
+    }
+    
+    .program-card {
+        padding: 1.5rem 1rem;
+        margin: 0 -1rem;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+    }
+    
+    .program-name {
+        font-size: 1.5rem;
+        word-break: break-word;
+        line-height: 1.3;
+    }
+    
+    .program-card * {
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .program-catch {
+        font-size: 0.95rem;
+        padding: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .program-catch i {
+        font-size: 1.25rem;
+    }
+    
+    .program-overview,
+    .program-recommended,
+    .program-testimonials,
+    .program-achievement,
+    .program-experience {
+        margin-bottom: 1.5rem;
+    }
+    
+    .program-recommended ul {
         padding-left: 0;
-        padding-right: 0;
+    }
+    
+    .program-recommended li {
+        padding-left: 1.25rem;
+        font-size: 0.9rem;
+    }
+    
+    .testimonial {
+        padding: 1rem;
+    }
+    
+    .btn-trial {
+        width: 100%;
+        justify-content: center;
+        padding: 0.875rem;
+        font-size: 0.875rem;
     }
     
     .hero-title {
@@ -1524,6 +1595,68 @@ h1, h2, h3, h4, h5, h6 {
     .contact-form-wrapper {
         padding: 1.5rem 1rem;
         margin: 0;
+    }
+    
+    /* 動画コンテナのスマホ対応 */
+    .program-video {
+        padding: 1rem;
+        margin: 0 -1rem;
+        width: calc(100% + 2rem);
+    }
+    
+    .video-wrapper {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+    }
+    
+    /* カードのスマホ対応 */
+    .endorsement-card {
+        padding: 1.5rem 1rem;
+        margin: 0 -1rem;
+        border-radius: 0;
+    }
+    
+    .endorsement-header h4 {
+        font-size: 1.25rem;
+    }
+    
+    .endorsement-quote {
+        padding: 1.5rem 1rem;
+        padding-top: 3rem;
+    }
+    
+    .endorsement-quote i {
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.5rem;
+        opacity: 0.5;
+    }
+    
+    .endorsement-quote p {
+        font-size: 1rem;
+        padding-right: 0;
+    }
+    
+    /* ボタンのスマホ対応 */
+    .btn-outline {
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+        white-space: normal;
+        line-height: 1.4;
+        word-break: break-word;
+    }
+    
+    .endorsement-action {
+        padding: 0 !important;
+        margin: 1.5rem 0 1rem !important;
+    }
+    
+    .endorsement-action .btn {
+        width: 100%;
+        max-width: 100%;
+        padding: 0.875rem 0.75rem;
     }
     
     .pc-only {
