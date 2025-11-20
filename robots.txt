@@ -1,0 +1,15 @@
+# Smart & Smooth Website - Robots.txt
+User-agent: *
+Allow: /
+Disallow: /google-apps-script/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://smartandsmooth.com/sitemap.xml
+
+# Allow search engines to crawl all images
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Crawl delay (optional, adjust if needed)
+# Crawl-delay: 1

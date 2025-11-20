@@ -9,25 +9,33 @@ Smart & Smoothは、元・上場企業副社長の公認会計士による法人
 
 ## 🌐 デプロイURL構造
 
-- メインLP: `https://yourdomain.com/`
-- 体験会ページ: `https://yourdomain.com/trial/`
+- メインLP: `https://smartandsmooth.com/`
+- 体験会ページ: `https://smartandsmooth.com/trial/`
 
 ## 📁 プロジェクト構造
 
 ```
 smartandsmooth/
-├── index.html              # メインLP
+├── index.html                    # メインLP
+├── robots.txt                    # クローラー制御
+├── sitemap.xml                   # サイトマップ
+├── .gitignore                    # Git除外設定
 ├── css/
-│   └── style.css          # メインLPのスタイル
+│   └── style.css                # メインLPのスタイル
 ├── js/
-│   └── script.js          # メインLPのJavaScript
-├── trial/                 # 体験会ページ（サブディレクトリ）
-│   ├── index.html        # 体験会ページ
+│   └── script.js                # メインLPのJavaScript
+├── images/
+│   ├── favicon.png              # ファビコン
+│   └── ogp-image.jpg            # SNS共有用画像
+├── trial/                       # 体験会ページ
+│   ├── index.html
 │   ├── css/
-│   │   └── style.css    # 体験会ページのスタイル
+│   │   └── style.css
 │   └── js/
-│       └── script.js     # 体験会ページのJavaScript
-└── README.md             # このファイル
+│       └── script.js
+├── google-apps-script/          # Google Apps Script
+│   └── updateFormChoices.gs
+└── README.md                    # このファイル
 ```
 
 ## ✨ 実装済み機能
