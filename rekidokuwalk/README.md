@@ -1,6 +1,6 @@
-# 歴読ウォーク - 公式サイト
+# 大人の寺子屋「歴読ウォーク」- 公式サイト
 
-歴史と散策を愛する人々のためのコミュニティサイト
+完全紹介制・歴史探訪コミュニティの公式ウェブサイト
 
 ## 📁 ディレクトリ構造
 
@@ -8,128 +8,153 @@
 rekidokuwalk/
 ├── index.html          # メインHTMLファイル
 ├── css/
-│   └── style.css       # スタイルシート
+│   └── style.css       # スタイルシート（30KB）
 ├── js/
-│   └── script.js       # JavaScript
+│   └── script.js       # JavaScript（9.7KB）
 ├── images/             # 画像ファイル用ディレクトリ
-│   ├── event-placeholder-1.jpg
-│   ├── event-placeholder-2.jpg
-│   └── event-placeholder-3.jpg
+│   └── .gitkeep
 └── README.md           # このファイル
+```
+
+## 🚀 デプロイ方法
+
+### GitHub経由でアップロード（推奨）
+
+1. **ZIPファイルを解凍**
+```bash
+unzip rekidokuwalk.zip
+cd rekidokuwalk
+```
+
+2. **既存リポジトリにアップロード**
+```bash
+# 既存のリポジトリをクローン
+git clone https://github.com/[your-username]/company-website.git
+cd company-website
+
+# rekidokuwalフォルダをコピー
+cp -r ../rekidokuwalk ./
+
+# Gitにコミット
+git add rekidokuwalk/
+git commit -m "Add 大人の寺子屋「歴読ウォーク」community site"
+git push origin main
+```
+
+3. **アクセスURL**
+```
+https://smartandsmooth.com/rekidokuwalk/
+```
+
+### 完成後のサーバー構造
+
+```
+smartandsmooth.com/
+├── index.html              # メインLP（既存）
+├── trial/                  # 既存フォルダ
+└── rekidokuwalk/           # 【NEW】今回追加
+    ├── index.html
+    ├── css/
+    ├── js/
+    └── images/
 ```
 
 ## 🎨 デザインコンセプト
 
-### カラーパレット
-- **プライマリカラー**: `#8B4513` (サドルブラウン) - 歴史的な温かみ
-- **セカンダリカラー**: `#2F4F4F` (ダークスレートグレー) - 落ち着いた雰囲気
-- **アクセントカラー**: `#CD853F` (ペルー) - 優しいゴールド
-- **背景色**: `#FAF8F3` (和紙のような温かみのある白)
+### ブランドカラー - ジャパンブルー × モダン和風
+
+- **プライマリカラー**: `#1B3D6D` (ジャパンブルー - 深い藍色)
+- **セカンダリカラー**: `#5D7C9A` (優しいグレイッシュブルー)
+- **アクセントカラー**: `#C8A882` (金茶 - 上品なゴールド)
+- **背景色**: `#FFFFFF` (白) / `#FAF8F5` (クリーム色)
 
 ### フォント
-- **見出し**: Noto Serif JP (明朝体) - 歴史的・格調高い印象
+- **見出し**: Noto Serif JP (明朝体) - 格調高く歴史的
 - **本文**: Noto Sans JP (ゴシック体) - 読みやすさ重視
+- **モダン**: Zen Kaku Gothic New - 現代的な印象
 
 ## ✨ 主な機能
 
-### 実装済み機能
-- ✅ レスポンシブデザイン（PC・タブレット・スマホ対応）
+- ✅ 完全レスポンシブデザイン（PC・タブレット・スマホ対応）
 - ✅ モバイルメニュー（ハンバーガーメニュー）
 - ✅ スムーススクロール
 - ✅ ページトップへ戻るボタン
-- ✅ スクロールアニメーション
+- ✅ スクロールアニメーション（フェードイン効果）
+- ✅ パララックス効果（ヒーローセクション）
 - ✅ SEO対策（noindex, nofollow設定）
-
-### セクション
-1. **ヘッダー** - ロゴとナビゲーション
-2. **ヒーローセクション** - メインビジュアルとキャッチコピー
-3. **歴読ウォークとは** - 活動紹介と3つの特徴
-4. **イベント情報** - イベントカード表示（3つのサンプル）
-5. **お問い合わせ** - メールアドレス表示
-6. **フッター** - リンクとSNSアイコン
-
-## 🖼️ 画像の準備
-
-以下の画像を `images/` ディレクトリに配置してください：
-
-1. **event-placeholder-1.jpg** - 日本橋のイベント画像（推奨サイズ: 800x500px）
-2. **event-placeholder-2.jpg** - 鎌倉のイベント画像（推奨サイズ: 800x500px）
-3. **event-placeholder-3.jpg** - 京都のイベント画像（推奨サイズ: 800x500px）
-
-※画像がない場合は、グラデーション背景が表示されます
-
-## 🚀 デプロイ方法
-
-### GitHub経由でアップロード
-
-1. **リポジトリの準備**
-```bash
-cd rekidokuwalk
-git init
-git add .
-git commit -m "Initial commit: 歴読ウォーク公式サイト"
-```
-
-2. **GitHubリポジトリにプッシュ**
-```bash
-git remote add origin [your-repository-url]
-git branch -M main
-git push -u origin main
-```
-
-3. **サーバーへのアップロード**
-- FTPまたはサーバーの管理画面を使用
-- `https://smartandsmooth.com/rekidokuwalk/` ディレクトリに全ファイルをアップロード
 
 ## 📝 カスタマイズガイド
 
-### メールアドレスの変更
-`index.html` の line 208 を編集：
+### 1. メールアドレスの変更
+`index.html` の2箇所を編集：
+
 ```html
+<!-- Contact Section: line 520付近 -->
 <a href="mailto:info@rekidokuwalk.example.com" class="contact-link">
   info@rekidokuwalk.example.com
 </a>
 ```
 
-### イベント情報の追加・変更
-`index.html` の Events Section（line 135-199）を編集。
-イベントカードをコピー＆ペーストして増やすことができます。
+### 2. 共同代表の情報追加
+`index.html` のOrganizer Section（line 486-501付近）を編集：
 
-### 色の変更
-`css/style.css` の `:root` セクション（line 5-22）でカラー変数を変更：
-```css
-:root {
-    --primary-color: #8B4513;
-    --secondary-color: #2F4F4F;
-    --accent-color: #CD853F;
-    /* ... */
-}
+```html
+<div class="organizer-role">共同代表</div>
+<h3 class="organizer-name">〇〇 〇〇</h3>
+<div class="organizer-bio">
+    <p>プロフィール文...</p>
+</div>
 ```
 
-### SNSリンクの設定
-`index.html` の Footer Section（line 247-251）を編集：
+### 3. 会員規約PDFのリンク設定
+規約PDFを作成後、`index.html` のFooterセクションを編集：
+
 ```html
-<a href="https://twitter.com/your-account" aria-label="Twitter">
-    <i class="fab fa-twitter"></i>
+<a href="pdf/membership-rules.pdf" class="footer-doc-link" target="_blank">
+    <i class="fas fa-file-alt"></i>
+    会員規約（PDF）
 </a>
 ```
 
+### 4. 色の変更
+`css/style.css` の `:root` セクションでカラー変数を変更：
+
+```css
+:root {
+    --primary-color: #1B3D6D;      /* メインカラー */
+    --accent-color: #C8A882;       /* アクセントカラー */
+}
+```
+
+## 🖼️ 画像の準備（今後）
+
+以下の画像を `images/` ディレクトリに配置することを推奨：
+
+1. **hero-bg.jpg** - ヒーロー背景（推奨: 1920×1080px）
+2. **organizer-ken.jpg** - 剱持さんのプロフィール写真（推奨: 500×500px）
+3. **co-organizer.jpg** - 共同代表のプロフィール写真（推奨: 500×500px）
+
+※画像がない場合は、プレースホルダー（グラデーション）で対応
+
 ## 🔧 今後の拡張案
 
-### 検討中の機能
-- [ ] お問い合わせフォームの実装
-- [ ] イベントカレンダー機能
-- [ ] 過去のイベントレポートページ
-- [ ] 会員登録・ログイン機能
-- [ ] ブログ・記事投稿機能
-- [ ] ギャラリーページ
-- [ ] FAQ（よくある質問）ページ
+### Phase 1（短期 - 1ヶ月以内）
+- [ ] プロフィール写真追加
+- [ ] 会員規約PDF作成・リンク設定
+- [ ] プライバシーポリシーページ
+- [ ] 正式メールアドレス設定
 
-### 技術的な拡張
-- [ ] CMS導入（WordPress, microCMS等）
+### Phase 2（中期 - 3ヶ月以内）
+- [ ] 過去の開催実績ページ
+- [ ] 推奨図書リストページ
+- [ ] お問い合わせフォーム実装
+- [ ] ブログ・活動レポート
+
+### Phase 3（長期 - 6ヶ月以内）
+- [ ] 会員専用ページ
 - [ ] イベント予約システム
-- [ ] メールマガジン配信機能
-- [ ] Google Maps API連携（散策ルート表示）
+- [ ] オンライン決済機能
+- [ ] CMS導入検討
 
 ## 📱 動作確認済み環境
 
@@ -140,10 +165,12 @@ git push -u origin main
 - iOS Safari (iOS 14+)
 - Android Chrome (Android 10+)
 
-## 📄 ライセンス
-
-© 2025 歴読ウォーク All Rights Reserved.
-
 ## 📞 サポート
 
-質問や問題がある場合は、プロジェクト管理者にお問い合わせください。
+サイトの更新やカスタマイズについてご質問がある場合は、お気軽にお問い合わせください。
+
+---
+
+**運営**: 合同会社Smart & Smooth  
+**代表**: 剱持 健  
+**© 2025 大人の寺子屋「歴読ウォーク」 All Rights Reserved.**

@@ -33,6 +33,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 spans[2].style.transform = 'none';
             });
         });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navMenu.contains(event.target);
+            const isClickOnToggle = navToggle.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                const spans = navToggle.querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
     }
 });
 
@@ -42,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const scrollToTopBtn = document.getElementById('scrollToTop');
 
 window.addEventListener('scroll', function() {
-    if (window.pageYOffset > 300) {
+    if (window.pageYOffset > 400) {
         scrollToTopBtn.classList.add('show');
     } else {
         scrollToTopBtn.classList.remove('show');
@@ -74,7 +88,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             e.preventDefault();
             
             const headerHeight = document.querySelector('.header').offsetHeight;
-            const targetPosition = target.offsetTop - headerHeight;
+            const targetPosition = target.offsetTop - headerHeight - 20;
             
             window.scrollTo({
                 top: targetPosition,
@@ -85,7 +99,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ========================================
-// Add animation on scroll
+// Fade-in Animation on Scroll
 // ========================================
 const observerOptions = {
     threshold: 0.1,
@@ -103,11 +117,13 @@ const observer = new IntersectionObserver(function(entries) {
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', function() {
-    const animateElements = document.querySelectorAll('.event-card, .feature-card, .contact-item');
+    const animateElements = document.querySelectorAll(
+        '.feature-card, .activity-card, .flow-step, .persona-item, .diversity-item, .faq-item, .organizer-card'
+    );
     
     animateElements.forEach(element => {
         element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
+        element.style.transform = 'translateY(30px)';
         element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(element);
     });
@@ -118,23 +134,148 @@ document.addEventListener('DOMContentLoaded', function() {
 // ========================================
 window.addEventListener('scroll', function() {
     const header = document.querySelector('.header');
-    if (window.pageYOffset > 0) {
-        header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+    if (window.pageYOffset > 10) {
+        header.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.1)';
     } else {
-        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
     }
 });
 
 // ========================================
-// Placeholder Images with Gradient
+// FAQ Accordion Enhancement (Optional)
 // ========================================
 document.addEventListener('DOMContentLoaded', function() {
-    const eventImages = document.querySelectorAll('.event-image img');
+    const faqItems = document.querySelectorAll('.faq-item');
     
-    eventImages.forEach((img, index) => {
-        img.addEventListener('error', function() {
-            // If image fails to load, hide it and show gradient background
-            this.style.display = 'none';
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        
+        // Add smooth height transition
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        answer.style.overflow = 'hidden';
+        answer.style.transition = 'max-height 0.3s ease, opacity 0.3s ease';
+        
+        // Optional: Add hover effect
+        item.addEventListener('mouseenter', function() {
+            this.style.borderLeft = '4px solid var(--primary-color)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.borderLeft = 'none';
         });
     });
 });
+
+// ========================================
+// Parallax Effect for Hero (Subtle)
+// ========================================
+window.addEventListener('scroll', function() {
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        const scrolled = window.pageYOffset;
+        const heroHeight = hero.offsetHeight;
+        
+        if (scrolled < heroHeight) {
+            const heroContent = hero.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+                heroContent.style.opacity = 1 - (scrolled / heroHeight) * 0.5;
+            }
+        }
+    }
+});
+
+// ========================================
+// Keyword Items Animation
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const keywords = document.querySelectorAll('.keyword-item');
+    
+    keywords.forEach((keyword, index) => {
+        keyword.style.opacity = '0';
+        keyword.style.transform = 'scale(0.8)';
+        keyword.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        
+        setTimeout(() => {
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'scale(1)';
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(keyword);
+        }, index * 100);
+    });
+});
+
+// ========================================
+// Email Link Protection (Simple obfuscation)
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    
+    emailLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Optional: Add analytics tracking here
+            console.log('Contact email clicked');
+        });
+    });
+});
+
+// ========================================
+// Prevent Right Click on Images (Optional)
+// ========================================
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    
+    images.forEach(img => {
+        img.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+    });
+});
+*/
+
+// ========================================
+// Print Styles Enhancement
+// ========================================
+window.addEventListener('beforeprint', function() {
+    // Expand all content for printing
+    const navMenu = document.querySelector('.nav-menu');
+    if (navMenu) {
+        navMenu.style.maxHeight = 'none';
+    }
+});
+
+// ========================================
+// Performance: Lazy Loading Enhancement
+// ========================================
+if ('loading' in HTMLImageElement.prototype) {
+    // Browser supports native lazy loading
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    images.forEach(img => {
+        img.src = img.dataset.src || img.src;
+    });
+} else {
+    // Fallback for browsers that don't support lazy loading
+    // Use Intersection Observer
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src || img.src;
+                img.classList.remove('lazy');
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    const lazyImages = document.querySelectorAll('img.lazy');
+    lazyImages.forEach(img => imageObserver.observe(img));
+}
