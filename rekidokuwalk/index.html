@@ -10,7 +10,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,13 +20,11 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
+                    <i class="fas fa-book-open"></i>
                     <div class="logo-text">
                         <span class="logo-subtitle">大人の寺子屋</span>
                         <h1 class="logo-title">歴読ウォーク</h1>
@@ -39,13 +37,13 @@
                         <span></span>
                     </button>
                     <ul class="nav-menu">
-                        <li><a href="#concept">想い</a></li>
-                        <li><a href="#features">特徴</a></li>
-                        <li><a href="#activities">活動内容</a></li>
-                        <li><a href="#guidelines">メンバーシップ</a></li>
-                        <li><a href="#organizer">運営者</a></li>
+                        <li><a href="#concept">Concept</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#activities">Activities</a></li>
+                        <li><a href="#guidelines">Guidelines</a></li>
+                        <li><a href="#organizer">Organizer</a></li>
                         <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
+                        <li><a href="#contact" class="nav-cta">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -70,7 +68,7 @@
     </section>
 
     <!-- Concept Section -->
-    <section id="concept" class="concept">
+    <section id="concept" class="concept section">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Concept</span>
@@ -78,33 +76,14 @@
                 <div class="section-divider"></div>
             </div>
             <div class="concept-content">
-                <div class="concept-main">
-                    <p class="concept-lead">
-                        ビジネスの拡大や人脈作りが目的ではありません。<br>
-                        歴史という共通のテーマを通じ、<br>
-                        利害関係なく「本気で語り合える仲間」と出会いたい。
-                    </p>
-                    <p class="concept-text">
-                        そんな想いから生まれた、完全紹介制のコミュニティです。
-                    </p>
-                </div>
-                <div class="concept-story">
-                    <h3 class="concept-story-title">なぜ、今これを立ち上げるのか</h3>
-                    <div class="concept-story-content">
-                        <p>
-                            私は公認会計士として、また上場企業の役員や経営者としてキャリアを重ねてきました。ビジネスの世界で成果を出すことに充実感を感じる一方で、ふと立ち止まった時、純粋な「知的好奇心」や「利害関係のない繋がり」への渇望があることに気づきました。
-                        </p>
-                        <p>
-                            学生時代よりも、社会経験を積んだ「大人」になった今の方が、歴史の面白さが身に沁みてわかります。本で読んだ知識が、現地を訪れ、その土地の空気を吸った瞬間に「点と点が線になる」あの感覚。
-                        </p>
-                        <p>
-                            この喜びを、一人で噛み締めるのではなく、<strong>「深く繋がり、本気で語り合い、共に楽しみ、高め合える仲間」</strong>と共有したい。それがこのコミュニティの原点です。
-                        </p>
-                        <p>
-                            これはビジネス拡大のための集客装置ではありません。私自身が心からくつろぎ、刺激を受けられる「居心地の良い場所」を作りたい。そして、そこに集まった仲間にとっても、家庭や職場とは違う、人生を豊かにする<strong>「サードプレイス」</strong>でありたいと願っています。
-                        </p>
-                    </div>
-                </div>
+                <p class="concept-lead">
+                    ビジネスの拡大や人脈作りが目的ではありません。<br>
+                    歴史という共通のテーマを通じ、<br>
+                    利害関係なく「本気で語り合える仲間」と出会いたい。
+                </p>
+                <p class="concept-text">
+                    そんな想いから生まれた、完全紹介制のコミュニティです。
+                </p>
                 <div class="concept-keywords">
                     <div class="keyword-item">
                         <i class="fas fa-shield-alt"></i>
@@ -124,7 +103,7 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="features">
+    <section id="features" class="features section">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">3 Features</span>
@@ -137,9 +116,10 @@
                     <div class="feature-icon">
                         <i class="fas fa-book-reader"></i>
                     </div>
-                    <h3 class="feature-title">本＋ウォーク<br><span class="feature-subtitle">インプット×体験</span></h3>
+                    <h3 class="feature-title">本＋ウォーク</h3>
+                    <p class="feature-subtitle">インプット × 体験</p>
                     <p class="feature-description">
-                        推奨図書で視点を得てから現地を歩くことで、歴史の解像度が一気に上がる体験。ただの観光では決して得られない、深い学びと気づきを提供します。
+                        推奨図書で視点を得てから現地を歩くことで、歴史の解像度が一気に上がる体験。
                     </p>
                 </div>
                 <div class="feature-card">
@@ -147,9 +127,10 @@
                     <div class="feature-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="feature-title">超・少人数制<br><span class="feature-subtitle">定員4〜8名</span></h3>
+                    <h3 class="feature-title">超・少人数制</h3>
+                    <p class="feature-subtitle">定員4〜8名</p>
                     <p class="feature-description">
-                        全員の顔が見える距離感。一方的なガイドではなく、参加者全員が主役となる「対話」重視の設計。ランチのテーブルを囲んで、全員で会話ができる濃密さです。
+                        全員の顔が見える距離感。一方的なガイドではなく、参加者全員が主役となる「対話」重視の設計。
                     </p>
                 </div>
                 <div class="feature-card">
@@ -157,9 +138,10 @@
                     <div class="feature-icon">
                         <i class="fas fa-sparkles"></i>
                     </div>
-                    <h3 class="feature-title">Smart & Smooth<br><span class="feature-subtitle">有料・コミコミプラン</span></h3>
+                    <h3 class="feature-title">Smart & Smooth</h3>
+                    <p class="feature-subtitle">有料・コミコミプラン</p>
                     <p class="feature-description">
-                        ランチ代、拝観料もすべて含んだ参加費設定。当日の面倒な現金のやり取りは一切なし。学びと交流だけに集中できる、ストレスフリーな体験を提供します。
+                        ランチ代、拝観料もすべて含んだ参加費設定。当日の面倒な現金のやり取りは一切なし。学びと交流だけに集中できるストレスフリーな体験。
                     </p>
                 </div>
             </div>
@@ -167,7 +149,7 @@
     </section>
 
     <!-- Activities Section -->
-    <section id="activities" class="activities">
+    <section id="activities" class="activities section">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Activities</span>
@@ -175,52 +157,52 @@
                 <div class="section-divider"></div>
             </div>
             <div class="activities-grid">
-                <div class="activity-card activity-regular">
-                    <div class="activity-label">Regular</div>
+                <div class="activity-card">
+                    <div class="activity-badge">Regular</div>
                     <div class="activity-icon">
                         <i class="fas fa-walking"></i>
                     </div>
                     <h3 class="activity-title">歴読ウォーク</h3>
                     <p class="activity-frequency">月1回開催</p>
                     <p class="activity-description">
-                        都内近郊の史跡探訪。推奨図書で事前にインプットした上で、現地を歩きながら対話を深めます。ランチ会＋街歩きで、知識と体験を結びつける充実の時間。
+                        都内近郊の史跡探訪。推奨図書で事前学習してから、実際に現地を歩きます。ランチ会では参加者全員で感想や発見をシェア。
                     </p>
-                    <ul class="activity-details">
-                        <li><i class="fas fa-check"></i> 推奨図書による事前学習</li>
-                        <li><i class="fas fa-check"></i> 史跡・歴史スポット探訪</li>
-                        <li><i class="fas fa-check"></i> ランチ会での対話</li>
+                    <ul class="activity-features">
+                        <li><i class="fas fa-check"></i> 推奨図書</li>
+                        <li><i class="fas fa-check"></i> 史跡探訪</li>
+                        <li><i class="fas fa-check"></i> ランチ会</li>
                     </ul>
                 </div>
-                <div class="activity-card activity-optional">
-                    <div class="activity-label">Optional</div>
+                <div class="activity-card">
+                    <div class="activity-badge">Optional</div>
                     <div class="activity-icon">
-                        <i class="fas fa-book"></i>
+                        <i class="fas fa-book-open"></i>
                     </div>
                     <h3 class="activity-title">読書会・勉強会</h3>
                     <p class="activity-frequency">任意参加</p>
                     <p class="activity-description">
-                        オンラインまたはオフラインでのインプットセッション。テーマ図書を読み込み、メンバー同士で意見交換。より深い理解と多様な視点を得られます。
+                        オンラインまたはオフラインでのインプット機会。歴史や文化について、より深く学びたい方向けの自由参加型イベント。
                     </p>
-                    <ul class="activity-details">
-                        <li><i class="fas fa-check"></i> オンライン・オフライン対応</li>
-                        <li><i class="fas fa-check"></i> 自由参加制</li>
-                        <li><i class="fas fa-check"></i> 双方向の対話重視</li>
+                    <ul class="activity-features">
+                        <li><i class="fas fa-check"></i> オンライン</li>
+                        <li><i class="fas fa-check"></i> 自由参加</li>
+                        <li><i class="fas fa-check"></i> 双方向対話</li>
                     </ul>
                 </div>
-                <div class="activity-card activity-special">
-                    <div class="activity-label">Special</div>
+                <div class="activity-card activity-card-highlight">
+                    <div class="activity-badge">Special</div>
                     <div class="activity-icon">
                         <i class="fas fa-torii-gate"></i>
                     </div>
                     <h3 class="activity-title">プレミアム京都ツアー</h3>
                     <p class="activity-frequency">年1回開催</p>
                     <p class="activity-description">
-                        京都検定2級を持つ主催者と行く、1泊2日の特別企画。通常の観光では見えない「京都の深淵」へ。メンバー限定の、最も濃密な学びと交流の時間です。
+                        京都検定2級を持つ主催者と行く、1泊2日の特別企画。通常の観光では見えない「京都の深淵」へご案内します。
                     </p>
-                    <ul class="activity-details">
-                        <li><i class="fas fa-check"></i> 1泊2日の特別企画</li>
+                    <ul class="activity-features">
+                        <li><i class="fas fa-check"></i> 1泊2日</li>
                         <li><i class="fas fa-check"></i> 京都検定保持者がガイド</li>
-                        <li><i class="fas fa-check"></i> 非公開スポット含む</li>
+                        <li><i class="fas fa-check"></i> 非公開スポット訪問</li>
                     </ul>
                 </div>
             </div>
@@ -228,7 +210,7 @@
     </section>
 
     <!-- Guidelines Section -->
-    <section id="guidelines" class="guidelines">
+    <section id="guidelines" class="guidelines section">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Guidelines</span>
@@ -236,116 +218,94 @@
                 <div class="section-divider"></div>
             </div>
             <div class="guidelines-content">
-                <div class="guideline-main">
-                    <div class="guideline-badge">
+                <div class="guidelines-intro">
+                    <div class="invitation-badge">
                         <i class="fas fa-lock"></i>
-                        <span>完全紹介制（Invitation Only）</span>
+                        完全紹介制（Invitation Only）
                     </div>
-                    <p class="guideline-text">
-                        当コミュニティは、居心地の良さを守るため<br>
-                        <strong>「既存メンバーからの紹介」</strong>がある方のみご入会いただけます。<br>
+                    <p class="guidelines-lead">
+                        当コミュニティは、居心地の良さを守るため「既存メンバーからの紹介」がある方のみご入会いただけます。<br>
                         最大メンバー数は20名程度に限定した、クローズドな組織です。
                     </p>
                 </div>
-
-                <div class="guideline-flow">
-                    <h3 class="guideline-flow-title">入会の流れ</h3>
+                
+                <div class="membership-flow">
+                    <h3 class="subsection-title">入会の流れ</h3>
                     <div class="flow-steps">
                         <div class="flow-step">
-                            <div class="flow-step-number">01</div>
-                            <div class="flow-step-content">
-                                <h4>メンバーからの紹介</h4>
-                                <p>既存メンバーからの推薦</p>
-                            </div>
+                            <div class="step-number">1</div>
+                            <h4>メンバーからの紹介</h4>
+                            <p>既存メンバーからのご紹介</p>
                         </div>
                         <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
                         <div class="flow-step">
-                            <div class="flow-step-number">02</div>
-                            <div class="flow-step-content">
-                                <h4>ウェルカム・チャット</h4>
-                                <p>主催者との価値観のすり合わせ</p>
-                            </div>
+                            <div class="step-number">2</div>
+                            <h4>ウェルカム・チャット</h4>
+                            <p>主催者との価値観のすり合わせ</p>
                         </div>
                         <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
                         <div class="flow-step">
-                            <div class="flow-step-number">03</div>
-                            <div class="flow-step-content">
-                                <h4>ゲスト参加</h4>
-                                <p>実際のイベントに体験参加</p>
-                            </div>
+                            <div class="step-number">3</div>
+                            <h4>ゲスト参加</h4>
+                            <p>実際のイベントに体験参加</p>
                         </div>
                         <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
                         <div class="flow-step">
-                            <div class="flow-step-number">04</div>
-                            <div class="flow-step-content">
-                                <h4>正式入会</h4>
-                                <p>コミュニティメンバーとして参加</p>
-                            </div>
+                            <div class="step-number">4</div>
+                            <h4>正式入会</h4>
+                            <p>コミュニティへの正式加入</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="guideline-persona">
-                    <h3 class="guideline-persona-title">求める人物像</h3>
-                    <p class="guideline-persona-lead">
-                        私たちは「属性（職業・年収）」ではなく、<br>
-                        「スタンス（価値観）」でメンバーを定義しています。
-                    </p>
+                <div class="membership-persona">
+                    <h3 class="subsection-title">求める人物像</h3>
+                    <p class="persona-intro">私たちは「属性（職業・年収）」ではなく、「スタンス（価値観）」でメンバーを定義しています。</p>
                     <div class="persona-grid">
-                        <div class="persona-item">
+                        <div class="persona-card">
                             <i class="fas fa-lightbulb"></i>
                             <h4>知的好奇心が高い人</h4>
-                            <p>新しいことを知る喜びを感じ、知性も感性も磨き続けたいと願う人</p>
+                            <p>新しいことを知る喜びを感じ、知性も感性も磨き続けたいと願う人。</p>
                         </div>
-                        <div class="persona-item">
-                            <i class="fas fa-comments"></i>
+                        <div class="persona-card">
+                            <i class="fas fa-comment-dots"></i>
                             <h4>対話を楽しめる人</h4>
-                            <p>自分の知識をひけらかすのではなく、他者の意見に耳を傾け、議論を通じて新しい視点を得ることに喜びを感じる人</p>
+                            <p>自分の知識をひけらかすのではなく、他者の意見に耳を傾け、議論を通じて新しい視点を得ることに喜びを感じる人。</p>
                         </div>
-                        <div class="persona-item">
+                        <div class="persona-card">
                             <i class="fas fa-handshake"></i>
                             <h4>フラットな関係を築ける人</h4>
-                            <p>年齢、性別、社会的地位に関係なく、一人の人間としてリスペクトを持って接することができる人</p>
+                            <p>年齢、性別、社会的地位に関係なく、一人の人間としてリスペクトを持って接することができる人。</p>
                         </div>
-                        <div class="persona-item">
+                        <div class="persona-card">
                             <i class="fas fa-running"></i>
                             <h4>主体的である人</h4>
-                            <p>「お客様」としてサービスを受けるだけでなく、その場の空気を良くすることに貢献できる、明朗快活な人</p>
+                            <p>「お客様」としてサービスを受けるだけでなく、その場の空気を良くすることに貢献できる、明朗快活な人。</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="guideline-diversity">
-                    <h3 class="guideline-diversity-title">歓迎する多様性</h3>
+                <div class="membership-diversity">
+                    <h3 class="subsection-title">多様性の歓迎</h3>
                     <div class="diversity-items">
                         <div class="diversity-item">
-                            <div class="diversity-icon">
-                                <i class="fas fa-user-graduate"></i>
-                            </div>
+                            <i class="fas fa-seedling"></i>
                             <h4>U30（30歳未満）</h4>
-                            <p>世代を超えた化学反応を起こすため、意欲ある若手メンバーを歓迎します。割引制度もご用意しています。</p>
+                            <p>世代を超えた化学反応を起こすため、意欲ある若手メンバーを歓迎。割引制度あり。</p>
                         </div>
                         <div class="diversity-item">
-                            <div class="diversity-icon">
-                                <i class="fas fa-venus"></i>
-                            </div>
+                            <i class="fas fa-venus"></i>
                             <h4>女性</h4>
-                            <p>男女比半々を目指し、女性が安心して参加できる環境作りを徹底。女性共同代表による安心の運営体制です。</p>
+                            <p>男女比半々を目指し、女性が安心して参加できる環境作りを徹底。女性共同代表による運営体制。</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="guideline-fees">
-                    <h3 class="guideline-fees-title">料金体系</h3>
+                <div class="membership-fees">
+                    <h3 class="subsection-title">料金体系</h3>
                     <div class="fees-content">
-                        <div class="fees-item">
-                            <h4><i class="fas fa-check-circle"></i> 入会金・年会費</h4>
-                            <p>当面は<strong>無料</strong>です。</p>
-                        </div>
-                        <div class="fees-item">
-                            <h4><i class="fas fa-calendar-alt"></i> イベント参加費</h4>
-                            <p>各イベントごとに都度決定いたします。<br>（ランチ代・拝観料込みのコミコミプラン）</p>
-                        </div>
+                        <p><strong>入会金・年会費：</strong>無料</p>
+                        <p><strong>イベント参加費：</strong>都度決定（ランチ代・拝観料込みのコミコミプラン）</p>
                     </div>
                 </div>
             </div>
@@ -353,28 +313,24 @@
     </section>
 
     <!-- Organizer Section -->
-    <section id="organizer" class="organizer">
+    <section id="organizer" class="organizer section">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Organizer</span>
                 <h2 class="section-title">運営者プロフィール</h2>
                 <div class="section-divider"></div>
             </div>
-            <div class="organizer-content">
+            <div class="organizer-grid">
                 <div class="organizer-card">
-                    <div class="organizer-image">
-                        <div class="organizer-image-placeholder">
+                    <div class="organizer-photo">
+                        <div class="photo-placeholder">
                             <i class="fas fa-user"></i>
                         </div>
                     </div>
                     <div class="organizer-info">
                         <div class="organizer-role">主催者</div>
-                        <h3 class="organizer-name">剱持 健<span class="organizer-name-en">Ken Kenmochi</span></h3>
-                        <div class="organizer-titles">
-                            <span class="organizer-title-item">公認会計士</span>
-                            <span class="organizer-title-item">研修講師</span>
-                            <span class="organizer-title-item">合同会社Smart & Smooth 代表</span>
-                        </div>
+                        <h3 class="organizer-name">剱持 健<span class="name-en">Ken Kenmochi</span></h3>
+                        <p class="organizer-title">公認会計士 / 研修講師 / 合同会社Smart & Smooth 代表</p>
                         <div class="organizer-bio">
                             <p>
                                 東京大学経済学部卒業後、PwC京都監査法人で公認会計士として企業を「外から」見る視点を培う。2012年に独立後、金融機関と企業の間に立ち、上場準備や事業再生で成果を上げる。
@@ -383,30 +339,27 @@
                                 2017年に株式会社タカヨシに専務取締役として参画し、債務超過の状態から「中から」ビジネスプロセスを整備。2022年、代表取締役副社長として東証マザーズ上場（IPO）を実現。
                             </p>
                             <p>
-                                「監査法人（理論）」「事業会社（実践）」「研修講師（教育）」の３つの視点を持ち、2023年に再独立。現在は「エデュテイナー（教育×エンターテイメント）」として活動。
-                            </p>
-                            <p>
-                                <strong>京都検定2級保持者</strong>。京都の監査法人での勤務経験を活かし、「安心・安全で、楽しく学べる場作り」のプロフェッショナルとして、ファシリテーションを行います。
+                                現在は「エデュテイナー（教育×エンターテイメント）」として、楽しく学べる場作りに邁進。京都検定2級保持者。「安心・安全で、楽しく学べる場作り」のプロフェッショナルとして、心理的安全性の高いファシリテーションを行います。
                             </p>
                         </div>
                         <div class="organizer-certification">
-                            <i class="fas fa-award"></i>
-                            <span>日本プロフェッショナル講師協会認定講師</span>
+                            <i class="fas fa-certificate"></i>
+                            日本プロフェッショナル講師協会認定講師
                         </div>
                     </div>
                 </div>
 
-                <div class="organizer-card organizer-card-co">
-                    <div class="organizer-image">
-                        <div class="organizer-image-placeholder">
+                <div class="organizer-card organizer-card-pending">
+                    <div class="organizer-photo">
+                        <div class="photo-placeholder">
                             <i class="fas fa-user"></i>
                         </div>
                     </div>
                     <div class="organizer-info">
                         <div class="organizer-role">共同代表</div>
-                        <h3 class="organizer-name organizer-name-tbd">調整中</h3>
+                        <h3 class="organizer-name">調整中</h3>
                         <div class="organizer-bio">
-                            <p class="organizer-tbd-text">
+                            <p>
                                 女性視点でのコミュニティケアを担当いたします。<br>
                                 詳細は決まり次第、ご案内いたします。
                             </p>
@@ -418,23 +371,21 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="faq">
+    <section id="faq" class="faq section">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">FAQ</span>
                 <h2 class="section-title">よくある質問</h2>
                 <div class="section-divider"></div>
             </div>
-            <div class="faq-content">
+            <div class="faq-list">
                 <div class="faq-item">
                     <div class="faq-question">
                         <i class="fas fa-question-circle"></i>
                         <h3>歴史に詳しくなくても大丈夫ですか？</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>
-                            もちろん、大歓迎です。当コミュニティは知識を披露する場ではなく、<strong>「知る過程を楽しむ場」</strong>です。推奨図書を通じて事前に学び、現地で体験しながら理解を深めていく設計になっています。わからないことを素直に聞ける、心理的安全性の高い場を大切にしています。
-                        </p>
+                        <p>もちろん、大歓迎です。当コミュニティは知識を披露する場ではなく、「知る過程を楽しむ場」です。推奨図書を読んで参加していただければ、十分に楽しんでいただけます。むしろ、初めて知る驚きや発見を大切にしています。</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -443,20 +394,25 @@
                         <h3>毎回参加できなくても大丈夫ですか？</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>
-                            もちろんです。お仕事やプライベートの都合もあるかと思います。<strong>ご自身のペースで「居心地良く」関わっていただければ</strong>それで十分です。無理なく、長く続けられることを大切にしています。
-                        </p>
+                        <p>もちろんです。お仕事やプライベートの都合もありますので、ご自身のペースで「居心地良く」関わってください。無理なく、長く続けられることが大切だと考えています。</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
                         <i class="fas fa-question-circle"></i>
-                        <h3>どのような年齢層の方が参加していますか？</h3>
+                        <h3>入会金はかかりますか？</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>
-                            20代後半から50代まで、幅広い年齢層の方にご参加いただいています。「大人の学び場」として、社会経験を積んだ方々が中心ですが、意欲ある若手（U30）も積極的に歓迎しています。年齢よりも、<strong>「価値観」と「学ぶ姿勢」</strong>を重視しています。
-                        </p>
+                        <p>入会金・年会費は無料です。イベント参加費は都度決定いたしますが、ランチ代や拝観料を含んだ「コミコミプラン」を採用しており、当日の現金のやり取りは一切ございません。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>どのような方が参加されていますか？</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>職業や年齢は様々ですが、共通しているのは「知的好奇心が高く、対話を楽しめる方」です。20代から60代まで、ビジネスパーソン、経営者、クリエイター、専門職など、多様なバックグラウンドの方が参加されています。</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -465,9 +421,7 @@
                         <h3>紹介者がいない場合はどうすればよいですか？</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>
-                            当コミュニティは完全紹介制のため、原則として既存メンバーからの紹介が必要です。ただし、当サイトの<a href="#contact">お問い合わせフォーム</a>から直接ご連絡いただいた場合、主催者が個別に対応させていただくこともございます。まずはお気軽にご相談ください。
-                        </p>
+                        <p>まずは下記のお問い合わせフォームからご連絡ください。主催者と直接お話しする機会を設け、コミュニティの雰囲気や価値観が合うかをご一緒に確認させていただきます。</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -476,20 +430,7 @@
                         <h3>ビジネス目的での参加は可能ですか？</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>
-                            当コミュニティは<strong>「純粋な学びと交流」</strong>を目的としています。コミュニティの場を利用した勧誘活動（宗教、ネットワークビジネス、保険等）や、出会いのみを目的とした行為は固くお断りしており、即時退会の対象となります。ただし、メンバー間で信頼関係が構築された後の、プライベートな場でのビジネス連携等は妨げません。
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-question-circle"></i>
-                        <h3>参加費はどのくらいですか？</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>
-                            入会金・年会費は当面無料です。各イベントの参加費は、内容に応じて都度決定いたします。ランチ代、拝観料などをすべて含んだ<strong>「コミコミプラン」</strong>を採用しており、当日の現金のやり取りは一切ありません。参加費の目安は、通常の歴読ウォークで5,000円〜8,000円程度を想定しています。
-                        </p>
+                        <p>コミュニティの場を利用した勧誘活動や、出会いのみを目的とした行為は禁止しています。ただし、メンバー間で信頼関係が構築された後の、プライベートな場でのビジネス連携等は妨げません。純粋に歴史を楽しむことを第一としてください。</p>
                     </div>
                 </div>
             </div>
@@ -497,38 +438,33 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact section">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Contact</span>
                 <h2 class="section-title">お問い合わせ</h2>
                 <div class="section-divider"></div>
-                <p class="section-description">紹介・招待をお持ちの方、またはご関心をお持ちの方は<br>お気軽にお問い合わせください</p>
             </div>
             <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>メールでのお問い合わせ</h3>
-                            <p>下記メールアドレスまでご連絡ください</p>
-                            <a href="mailto:info@rekidokuwalk.example.com" class="contact-link">info@rekidokuwalk.example.com</a>
-                            <p class="contact-note">※2-3営業日以内にご返信いたします</p>
-                        </div>
+                <p class="contact-lead">
+                    紹介・招待をお持ちの方、またはご関心をお持ちの方は<br>
+                    お気軽にお問い合わせください
+                </p>
+                <div class="contact-box">
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <h3>メールでのお問い合わせ</h3>
+                        <p>下記メールアドレスまでご連絡ください</p>
+                        <a href="mailto:info@smartandsmooth.com" class="contact-link">
+                            info@smartandsmooth.com
+                        </a>
+                        <p class="contact-note">※2-3営業日以内にご返信いたします</p>
                     </div>
                 </div>
                 <div class="contact-notice">
-                    <div class="notice-box">
-                        <i class="fas fa-info-circle"></i>
-                        <div>
-                            <h4>ご入会をご検討の方へ</h4>
-                            <p>
-                                当コミュニティは完全紹介制です。既存メンバーからの紹介がある方、または主催者との面談を希望される方は、上記メールアドレスまでその旨をお知らせください。価値観のすり合わせを大切にしておりますので、まずはお気軽にご相談ください。
-                            </p>
-                        </div>
-                    </div>
+                    <i class="fas fa-info-circle"></i>
+                    <h4>ご入会をご検討の方へ</h4>
+                    <p>当コミュニティは完全紹介制です。既存メンバーからの紹介がある方、または主催者との面談を経て価値観のすり合わせができた方のみご入会いただけます。まずはお気軽にお問い合わせください。</p>
                 </div>
             </div>
         </div>
@@ -540,40 +476,43 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <div class="footer-logo-icon">
-                            <i class="fas fa-book-open"></i>
-                        </div>
+                        <i class="fas fa-book-open"></i>
                         <div class="footer-logo-text">
-                            <span class="footer-logo-subtitle">大人の寺子屋</span>
-                            <h3 class="footer-logo-title">歴読ウォーク</h3>
+                            <span>大人の寺子屋</span>
+                            <h3>歴読ウォーク</h3>
                         </div>
                     </div>
-                    <p class="footer-tagline">本で学び、現地で感じる。<br>深く繋がり、共に育つ「最高の居場所」</p>
+                    <p class="footer-tagline">
+                        本で学び、現地で感じる。<br>
+                        深く繋がり、共に育つ「最高の居場所」
+                    </p>
                 </div>
                 <div class="footer-links">
-                    <h4>メニュー</h4>
-                    <ul>
-                        <li><a href="#concept">想い</a></li>
-                        <li><a href="#features">特徴</a></li>
-                        <li><a href="#activities">活動内容</a></li>
-                        <li><a href="#guidelines">メンバーシップ</a></li>
-                        <li><a href="#organizer">運営者</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-company">
-                    <h4>運営会社</h4>
-                    <p class="footer-company-name">合同会社Smart & Smooth</p>
-                    <p class="footer-company-rep">代表：剱持 健</p>
-                    <div class="footer-docs">
-                        <a href="#" class="footer-doc-link">
-                            <i class="fas fa-file-alt"></i>
-                            会員規約（PDF）
-                        </a>
-                        <a href="#" class="footer-doc-link">
-                            <i class="fas fa-shield-alt"></i>
-                            プライバシーポリシー
-                        </a>
+                    <div class="footer-column">
+                        <h4>メニュー</h4>
+                        <ul>
+                            <li><a href="#concept">Concept</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#activities">Activities</a></li>
+                            <li><a href="#guidelines">Guidelines</a></li>
+                            <li><a href="#organizer">Organizer</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>運営会社</h4>
+                        <p>合同会社Smart & Smooth</p>
+                        <p>代表：剱持 健</p>
+                        <div class="footer-docs">
+                            <a href="#" class="footer-doc-link">
+                                <i class="fas fa-file-alt"></i>
+                                会員規約（PDF）
+                            </a>
+                            <a href="#" class="footer-doc-link">
+                                <i class="fas fa-shield-alt"></i>
+                                プライバシーポリシー
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -583,12 +522,12 @@
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-to-top" aria-label="ページトップへ">
+    <!-- Page Top Button -->
+    <button class="page-top" aria-label="ページトップへ戻る">
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <!-- Custom JavaScript -->
+    <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
 </html>
