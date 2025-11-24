@@ -3,6 +3,7 @@ User-agent: *
 Allow: /
 Disallow: /google-apps-script/
 Disallow: /*.json$
+Disallow: /rekidokuwalk/
 
 # Sitemap
 Sitemap: https://smartandsmooth.com/sitemap.xml
