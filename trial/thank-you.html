@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>お申し込みありがとうございます | Smart & Smooth マネジメントゲーム体験</title>
+    <meta name="description" content="マネジメントゲーム体験研修へのお申し込みありがとうございます。確認メールをお送りしましたのでご確認ください。">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://smartandsmooth.com/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://smartandsmooth.com/images/apple-touch-icon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VB7F17M5ZF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VB7F17M5ZF');
+        
+        // ページビュー送信
+        gtag('event', 'page_view', {
+            page_title: 'Thank You Page',
+            page_location: window.location.href,
+            page_path: window.location.pathname
+        });
+        
+        // 申込完了イベント送信（Google Analytics用）
+        gtag('event', 'conversion', {
+            'event_category': 'Application',
+            'event_label': 'Management Game Trial',
+            'value': 10000
+        });
+    </script>
+    
+    <!-- Google広告コンバージョンタグ（キャンペーン作成後に追加） -->
+    <!-- 
+    <script>
+        gtag('event', 'conversion', {
+            'send_to': 'AW-XXXXXXXXXX/xxxxx',
+            'value': 10000,
+            'currency': 'JPY'
+        });
+    </script>
+    -->
+    
+    <style>
+        .thank-you-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .thank-you-card {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .thank-you-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            animation: scaleIn 0.5s ease-out;
+        }
+        
+        .thank-you-icon i {
+            font-size: 50px;
+            color: white;
+        }
+        
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .thank-you-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        
+        .thank-you-message {
+            font-size: 1.1rem;
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .thank-you-message strong {
+            color: #667eea;
+            font-weight: 700;
+        }
+        
+        .info-box {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
+            border-radius: 8px;
+        }
+        
+        .info-box h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-box h3 i {
+            color: #667eea;
+            margin-right: 10px;
+        }
+        
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .info-box li {
+            padding: 8px 0;
+            color: #4a5568;
+            display: flex;
+            align-items: start;
+        }
+        
+        .info-box li i {
+            color: #667eea;
+            margin-right: 10px;
+            margin-top: 4px;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .social-links {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .social-links p {
+            color: #718096;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+        
+        .social-icon.twitter {
+            background: #1DA1F2;
+        }
+        
+        .social-icon.facebook {
+            background: #4267B2;
+        }
+        
+        .social-icon.line {
+            background: #00B900;
+        }
+        
+        @media (max-width: 768px) {
+            .thank-you-card {
+                padding: 40px 25px;
+            }
+            
+            .thank-you-title {
+                font-size: 1.5rem;
+            }
+            
+            .thank-you-message {
+                font-size: 1rem;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="thank-you-card">
+            <!-- アイコン -->
+            <div class="thank-you-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            
+            <!-- タイトル -->
+            <h1 class="thank-you-title">
+                お申し込みありがとうございます！
+            </h1>
+            
+            <!-- メッセージ -->
+            <p class="thank-you-message">
+                <strong>マネジメントゲーム 1日経営体験研修</strong>へのお申し込みを受け付けました。<br>
+                確認メールを送信いたしましたので、ご確認ください。
+            </p>
+            
+            <!-- 次のステップ情報 -->
+            <div class="info-box">
+                <h3><i class="fas fa-info-circle"></i>今後の流れ</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span><strong>3営業日以内</strong>に、担当者より確認のご連絡をさせていただきます</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-calendar-check"></i>
+                        <span>開催日の<strong>1週間前</strong>に、詳細案内（会場・持ち物など）をメールでお送りします</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-credit-card"></i>
+                        <span>お支払いは、<strong>事前銀行振込</strong>または<strong>当日現金・PayPay</strong>をお選びいただけます</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 注意事項 -->
+            <div class="info-box">
+                <h3><i class="fas fa-exclamation-triangle"></i>ご注意ください</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-inbox"></i>
+                        <span>確認メールが届かない場合は、<strong>迷惑メールフォルダ</strong>をご確認ください</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>ご不明点がございましたら、お気軽にお問い合わせください</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- ボタン -->
+            <div class="button-group">
+                <a href="https://smartandsmooth.com/" class="btn btn-primary">
+                    <i class="fas fa-home"></i>
+                    トップページへ
+                </a>
+                <a href="https://smartandsmooth.com/trial/" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i>
+                    研修詳細に戻る
+                </a>
+            </div>
+            
+            <!-- SNSシェア -->
+            <div class="social-links">
+                <p>研修情報をシェアして、仲間を誘いませんか？</p>
+                <div class="social-icons">
+                    <a href="https://twitter.com/intent/tweet?text=マネジメントゲーム体験研修に申し込みました！会計が楽しく学べそう✨&url=https://smartandsmooth.com/trial/" target="_blank" class="social-icon twitter" aria-label="Twitterでシェア">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://smartandsmooth.com/trial/" target="_blank" class="social-icon facebook" aria-label="Facebookでシェア">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://social-plugins.line.me/lineit/share?url=https://smartandsmooth.com/trial/" target="_blank" class="social-icon line" aria-label="LINEでシェア">
+                        <i class="fab fa-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
