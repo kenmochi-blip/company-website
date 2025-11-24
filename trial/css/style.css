@@ -114,11 +114,18 @@ a {
     display: none;
     background: none;
     border: none;
-    font-size: 24px;
     color: var(--text-dark);
     cursor: pointer;
     padding: 8px;
     transition: color 0.3s;
+    width: 40px;
+    height: 40px;
+}
+
+.mobile-menu-toggle svg {
+    width: 24px;
+    height: 24px;
+    display: block;
 }
 
 .mobile-menu-toggle:hover {
@@ -150,11 +157,18 @@ a {
     right: 20px;
     background: none;
     border: none;
-    font-size: 24px;
     color: var(--text-dark);
     cursor: pointer;
     padding: 8px;
     transition: color 0.3s;
+    width: 40px;
+    height: 40px;
+}
+
+.mobile-menu-close svg {
+    width: 24px;
+    height: 24px;
+    display: block;
 }
 
 .mobile-menu-close:hover {

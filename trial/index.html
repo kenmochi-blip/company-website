@@ -47,7 +47,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/style.css">
     
     <!-- Structured Data (JSON-LD) -->
@@ -311,7 +311,11 @@
                     <a href="#faq" class="nav-link">よくある質問</a>
                 </nav>
                 <button class="mobile-menu-toggle" aria-label="メニューを開く">
-                    <i class="fas fa-bars"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
                 </button>
             </div>
         </div>
@@ -320,7 +324,10 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu">
         <button class="mobile-menu-close" aria-label="メニューを閉じる">
-            <i class="fas fa-times"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
         </button>
         <nav>
             <a href="#about">マネジメントゲームとは</a>
@@ -346,7 +353,7 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">【東京・京都開催】マネジメントゲーム体験 | 会計が「面白い！」に変わる1日研修</h1>
+                    <h1 class="hero-title">【東京・京都開催】<br>マネジメントゲーム体験<br>会計が「面白い！」に変わる1日研修</h1>
                     <p class="hero-subtitle">1日で経営と会計の本質を丸ごと体感。個人参加OK、会計知識ゼロから始められる体験型研修。</p>
                     <a href="#schedule" class="cta-button">開催スケジュールを見て、今すぐ申し込む</a>
                 </div>
