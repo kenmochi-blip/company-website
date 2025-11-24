@@ -337,6 +337,53 @@ function initFadeInAnimation() {
 }
 
 // ================================================
+// Mobile Menu
+// ================================================
+
+/**
+ * Initialize mobile menu functionality
+ */
+function initMobileMenu() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu nav a');
+    
+    // Create overlay element
+    const overlay = document.createElement('div');
+    overlay.className = 'mobile-menu-overlay';
+    document.body.appendChild(overlay);
+    
+    // Open mobile menu
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+    
+    // Close mobile menu
+    const closeMobileMenu = () => {
+        mobileMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+    
+    if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+    }
+    
+    // Close when clicking overlay
+    overlay.addEventListener('click', closeMobileMenu);
+    
+    // Close when clicking menu links
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+}
+
+// ================================================
 // Initialization
 // ================================================
 
@@ -348,6 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initBackToTop();
     initFadeInAnimation();
+    initMobileMenu();
     
     // Add event listener to apply button
     const applyButton = document.getElementById('apply-button');
