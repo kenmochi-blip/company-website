@@ -1,16 +1,30 @@
-# Smart & Smooth Website - Robots.txt
-User-agent: *
-Allow: /
-Disallow: /google-apps-script/
-Disallow: /*.json$
-Disallow: /rekidokuwalk/
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
 
-# Sitemap
-Sitemap: https://smartandsmooth.com/sitemap.xml
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# Allow search engines to crawl all images
-User-agent: Googlebot-Image
-Allow: /images/
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
-# Crawl delay (optional, adjust if needed)
-# Crawl-delay: 1
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node modules (if used in future)
+node_modules/
+
+# Environment variables (if used in future)
+.env
+.env.local

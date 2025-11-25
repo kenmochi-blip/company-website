@@ -1,163 +1,279 @@
-# GitHub アップロードチェックリスト
+/* ===================================
+   歴読ウォーク - スタイルシート
+   =================================== */
 
-## ✅ アップロード前の確認事項
+/* === Reset & Base === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-### 1. 機密情報の確認
-- [x] Google Analytics ID (G-VB7F17M5ZF) - 公開OK
-- [x] Formspree ID (xrbogwpd) - 公開OK
-- [x] Google Apps Script URL - 公開OK
-- [x] パスワードやAPIキーなし - OK
+:root {
+    /* カラーテーマ（歴史・和風テーマの例） */
+    --primary-color: #8B4513;      /* 茶色（歴史的なイメージ） */
+    --secondary-color: #2E8B57;    /* 緑（自然・散策） */
+    --accent-color: #DAA520;       /* ゴールド（アクセント） */
+    --text-color: #333;
+    --bg-color: #F5F5DC;           /* ベージュ */
+    --white: #FFFFFF;
+    
+    /* スペーシング */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+}
 
-### 2. ファイル構成の確認
-- [x] index.html - 最新版
-- [x] trial/index.html - 最新版
-- [x] css/style.css - レスポンシブ対応済み
-- [x] images/favicon.png - ロゴファビコン
-- [x] images/ogp-image.jpg - SNS共有用画像
-- [x] robots.txt - 新規作成
-- [x] sitemap.xml - 新規作成
-- [x] .gitignore - 新規作成
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+}
 
-### 3. SEO対策の確認
-- [x] meta description - 最適化済み
-- [x] OGPタグ - 設定済み
-- [x] 構造化データ (JSON-LD) - 完備
-- [x] ファビコン - 絶対パス設定
-- [x] BreadcrumbList - 追加済み
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
 
-## 📦 アップロードするファイル
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-color);
+}
 
-### ルートディレクトリ
-- index.html
-- robots.txt
-- sitemap.xml
-- .gitignore
-- README.md
-- DEPLOYMENT.md
-- SEO_IMPROVEMENT_REPORT.md
-- GITHUB_UPLOAD_CHECKLIST.md
+/* === Header === */
+.header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-sm) 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-### ディレクトリ
-- css/ (style.css)
-- js/ (script.js)
-- images/ (favicon.png, ogp-image.jpg)
-- trial/ (index.html, css/, js/)
-- google-apps-script/ (updateFormChoices.gs)
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-## 🚀 アップロード手順
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary-color);
+}
 
-### 方法1: GitHubウェブ経由（簡単）
+.nav {
+    display: flex;
+    gap: var(--spacing-md);
+}
 
-1. GitHubのリポジトリページに移動
-2. 「Add file」→「Upload files」をクリック
-3. すべてのファイルとフォルダをドラッグ＆ドロップ
-4. コミットメッセージを入力（例: "Complete website update with SEO improvements"）
-5. 「Commit changes」をクリック
+.nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
 
-### 方法2: Git コマンド（推奨）
+.nav a:hover {
+    color: var(--primary-color);
+}
 
-```bash
-# 既存のGitリポジトリがある場合
-cd /path/to/smartandsmooth
-git add .
-git commit -m "Complete website update with SEO improvements"
-git push origin main
+/* === Hero Section === */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-# 新規リポジトリの場合
-cd /path/to/smartandsmooth
-git init
-git add .
-git commit -m "Initial commit: Complete Smart & Smooth website"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/smartandsmooth.git
-git push -u origin main
-```
+.hero-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: var(--spacing-sm);
+}
 
-## 📋 アップロード後の確認
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.9;
+}
 
-### GitHubで確認
-- [ ] すべてのファイルがアップロードされているか
-- [ ] ディレクトリ構造が正しいか
-- [ ] README.mdが正しく表示されるか
+.btn-primary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
-### 本番サイトで確認
-- [ ] ファビコンが表示されるか
-- [ ] robots.txtが読めるか (`https://smartandsmooth.com/robots.txt`)
-- [ ] sitemap.xmlが読めるか (`https://smartandsmooth.com/sitemap.xml`)
-- [ ] スマホ表示が正しいか
-- [ ] すべてのリンクが動作するか
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
 
-## 🎯 GitHub Pages でホスティングする場合
+/* === About Section === */
+.about {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--white);
+}
 
-もしGitHub Pagesを使う場合：
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
 
-1. リポジトリの Settings → Pages
-2. Source: Deploy from a branch
-3. Branch: main / (root)
-4. Save
+.about-content p {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-sm);
+}
 
-**注意**: カスタムドメイン (smartandsmooth.com) を使用する場合：
-- CNAMEファイルを作成
-- DNSレコードを設定
-- SSL証明書を有効化
+/* === Events Section === */
+.events {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--bg-color);
+}
 
-## ⚠️ 注意事項
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
 
-### アップロードしてはいけないファイル
-- .DS_Store（macOS）
-- Thumbs.db（Windows）
-- .env（環境変数ファイル）
-- node_modules/（今回は存在しない）
+.event-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: var(--spacing-md);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: var(--spacing-sm);
+    transition: transform 0.3s;
+}
 
-### 既に.gitignoreで除外されているもの
-- エディタ設定ファイル (.vscode/, .idea/)
-- 一時ファイル (*.tmp, *.log)
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
 
-## 💡 Tips
+.event-date {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-sm);
+    border-radius: 8px;
+    text-align: center;
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-### リポジトリを公開(public)にするか、非公開(private)にするか
+.date-day {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+}
 
-**公開リポジトリ (public) のメリット**:
-- 無料でGitHub Pagesが使える
-- ポートフォリオとして使える
-- オープンソースコミュニティに貢献
+.date-month {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
 
-**公開リポジトリのデメリット**:
-- コードが誰でも見られる（今回は問題なし）
+.event-info {
+    flex: 1;
+}
 
-**非公開リポジトリ (private) のメリット**:
-- コードを非公開にできる
-- クライアント案件に適している
+.event-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    color: var(--primary-color);
+}
 
-**非公開リポジトリのデメリット**:
-- GitHub Pages が有料プランでのみ使用可能
+.event-location {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-xs);
+}
 
-### おすすめ
-今回のプロジェクトは**公開リポジトリでOK**です。機密情報は含まれていません。
+.event-location i {
+    margin-right: 0.25rem;
+}
 
-## 📞 問題が発生した場合
+.event-description {
+    font-size: 0.95rem;
+    color: #666;
+}
 
-### よくある問題
+/* === Contact Section === */
+.contact {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--white);
+}
 
-**Q: ファイルが大きすぎてアップロードできない**
-A: images/favicon.png (1.4MB) が原因の可能性。最適化されたバージョンを使用してください。
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
 
-**Q: .gitignoreが効かない**
-A: 既にGitでトラッキングされているファイルは除外されません。以下を実行：
-```bash
-git rm -r --cached .
-git add .
-git commit -m "Apply .gitignore"
-```
+/* === Footer === */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: var(--spacing-md) 0;
+}
 
-**Q: リポジトリの履歴を全削除したい**
-A: 新しいリポジトリとして作り直すのが簡単です。
+/* === Responsive === */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
 
-## ✅ 完了確認
+    .nav {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
 
-- [ ] GitHubにアップロード完了
-- [ ] 本番サイトで動作確認完了
-- [ ] Google Search Consoleでサイトマップ送信完了（任意）
-- [ ] ファビコンがブラウザタブに表示される
+    .hero-title {
+        font-size: 2rem;
+    }
 
-おめでとうございます！🎉
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-card {
+        flex-direction: column;
+    }
+
+    .event-date {
+        width: 100%;
+    }
+}
