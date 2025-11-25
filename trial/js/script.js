@@ -276,6 +276,16 @@ function handleApplyClick() {
         */
     }
     
+    // Meta Pixelにイベント送信
+    if (typeof fbq !== 'undefined') {
+        fbq('track', 'InitiateCheckout', {
+            value: 10000,
+            currency: 'JPY',
+            content_name: 'マネジメントゲーム体験研修',
+            content_category: '研修・セミナー'
+        });
+    }
+    
     // Google Formを新しいタブで開く
     window.open(GOOGLE_FORM_URL, '_blank');
 }
