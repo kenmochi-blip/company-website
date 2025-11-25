@@ -257,6 +257,26 @@ function handleApplyClick() {
         return;
     }
     
+    // Google Analyticsにイベント送信
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'click_apply_button', {
+            'event_category': 'Application',
+            'event_label': 'Management Game Trial - Apply Button Click',
+            'value': 10000
+        });
+        
+        // Google広告コンバージョンイベント送信
+        // ★★★ Google広告でキャンペーン作成後、以下のコメントを外して設定してください ★★★
+        /*
+        gtag('event', 'conversion', {
+            'send_to': 'AW-XXXXXXXXXX/xxxxx',  // ← Google広告から取得したコンバージョンIDに置き換え
+            'value': 10000,
+            'currency': 'JPY'
+        });
+        */
+    }
+    
+    // Google Formを新しいタブで開く
     window.open(GOOGLE_FORM_URL, '_blank');
 }
 
