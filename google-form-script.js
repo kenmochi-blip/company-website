@@ -96,7 +96,9 @@ function onFormSubmit(e) {
             "※確認メールが届かない場合は、迷惑メールフォルダをご確認ください。\n";
     
     // メール送信
-    GmailApp.sendEmail(email, subject, body);
+    GmailApp.sendEmail(email, subject, body, {
+      name: 'Smart & Smooth'  // 送信者名として表示される名前
+    });
     
     // ログに記録
     Logger.log("確認メール送信成功: " + email + " (名前: " + name + ")");
