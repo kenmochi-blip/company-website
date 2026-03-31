@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>マルチプレイヤー・タイマー</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#181a1b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <style>
+        :root { --bg-color: #181a1b; --p1: #3498db; --p2: #e74c3c; --p3: #2ecc71; --p4: #f1c40f; --p5: #9b59b6; }
+        html, body { height: 100%; width: 100%; margin: 0; padding: 0; overflow: hidden; background-color: var(--bg-color); font-family: sans-serif; }
+        #game-container { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: background-color 0.3s; }
+        #timer-display { color: white; font-size: 25vmin; font-weight: bold; text-align: center; transition: transform 0.6s ease-in-out; }
+        #settings-panel { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; z-index: 10; }
+        .setting-item { margin: 20px; font-size: 1.2rem; }
+        input, select { padding: 10px; font-size: 1.2rem; border-radius: 5px; }
+        #start-btn { padding: 15px 40px; font-size: 1.5rem; background: #2ecc71; color: white; border: none; border-radius: 50px; cursor: pointer; margin-top: 30px; }
+        #settings-toggle { position: absolute; top: 40px; right: 20px; font-size: 2rem; color: white; opacity: 0.5; z-index: 5; background: none; border: none; }
+    </style>
+</head>
+<body>
+    <button id="settings-toggle">⚙️</button>
+    <div id="settings-panel">
+        <h2>Game Settings</h2>
+        <div class="setting-item">人数: <select id="player-count"><option value="2">2人</option><option value="3">3人</option><option value="4" selected>4人</option><option value="5">5人</option></select></div>
+        <div class="setting-item">時間: <input type="number" id="min" value="1" min="0" max="9" style="width: 50px;"> 分 <input type="number" id="sec" value="0" min="0" max="59" style="width: 50px;"> 秒</div>
+        <button id="start-btn">Start Game</button>
+    </div>
+    <div id="game-container"><div id="timer-display">Tap to Start</div></div>
+    <script>
+        const playerColors = ['#3498db', '#e74c3c', '#2ecc71', '#f1c40f', '#9b59b6'];
+        let config = { players: 4, totalTime: 60 };
+        let currentPlayer = 0, timeLeft = 0, timerInterval = null, totalRotation = 0, isAudioUnlocked = false, audioCtx;
+        const explosionSound = new Audio("data:audio/wav;base64,UklGRq4BAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABgAZGF0YfABAAAAAAAAAAAA/v8AAP//AAAAAAAAAAAAAP//AAAAAP//AAAAAAAA/v8AAAAA//8AAAAAAAAAAAAA//8AAP//AAAAAAAA/v8AAP//AAAAAAAAAAAAAP//AAAAAAAAAAAAAP//AAAAAAAAAAD+/wAA//8AAAAAAAAAAAAA//8AAAAA//8AAAAAAAAAAAAA//8AAP//AAAAAAAAAAAAAP//AAAAAAAAAAAAAP//AAD//wAAAAA=");
+        const panel = document.getElementById('settings-panel'), display = document.getElementById('timer-display'), container = document.getElementById('game-container');
+        document.getElementById('start-btn').onclick = () => {
+            config.players = parseInt(document.getElementById('player-count').value);
+            config.totalTime = (parseInt(document.getElementById('min').value) * 60) + parseInt(document.getElementById('sec').value);
+            panel.style.display = 'none'; resetGame();
+        };
+        document.getElementById('settings-toggle').onclick = (e) => { e.stopPropagation(); clearInterval(timerInterval); panel.style.display = 'flex'; };
+        function resetGame() { currentPlayer = 0; totalRotation = 0; display.style.transform = `rotate(0deg)`; display.textContent = "Ready?"; container.style.backgroundColor = '#181a1b'; }
+        function playBeep() { if (!audioCtx) return; const osc = audioCtx.createOscillator(); const gain = audioCtx.createGain(); osc.connect(gain); gain.connect(audioCtx.destination); osc.frequency.setValueAtTime(800, audioCtx.currentTime); gain.gain.setValueAtTime(0.1, audioCtx.currentTime); osc.start(); osc.stop(audioCtx.currentTime + 0.1); }
+        function nextTurn() {
+            if (!isAudioUnlocked) { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); explosionSound.play().then(() => { explosionSound.pause(); explosionSound.currentTime = 0; }); isAudioUnlocked = true; }
+            clearInterval(timerInterval); currentPlayer = (currentPlayer % config.players) + 1;
+            totalRotation += (360 / config.players); display.style.transform = `rotate(${totalRotation}deg)`;
+            container.style.backgroundColor = playerColors[currentPlayer - 1];
+            timeLeft = config.totalTime; updateDisplay();
+            timerInterval = setInterval(() => { timeLeft--; updateDisplay(); if (timeLeft <= 5 && timeLeft > 0) playBeep(); if (timeLeft <= 0) { clearInterval(timerInterval); explosionSound.play(); container.style.backgroundColor = '#c0392b'; display.textContent = "BOOM!"; } }, 1000);
+        }
+        function updateDisplay() { const m = Math.floor(timeLeft / 60); const s = timeLeft % 60; display.textContent = `${m}:${String(s).padStart(2, '0')}`; }
+        container.onclick = nextTurn;
+        if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./sw.js'); }
+    </script>
+</body>
+</html>
