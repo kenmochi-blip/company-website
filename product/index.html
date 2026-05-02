@@ -3,80 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI経費精算システム | Smart & Smooth</title>
+  <title>AI経費ログシステム | スマホで撮るだけ、月額ゼロの業務効率化</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
-    body { font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; color: #333; }
-    .hero { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 80px 0; text-align: center; }
-    .hero-title { font-weight: 800; font-size: 2.5rem; letter-spacing: -0.05em; color: #1a1a1a; margin-bottom: 20px; }
-    .feature-icon { font-size: 2.5rem; color: #0d6efd; margin-bottom: 15px; }
-    .buy-btn { font-size: 1.2rem; padding: 15px 40px; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3); transition: transform 0.2s; }
-    .buy-btn:hover { transform: translateY(-2px); }
-    .price-tag { font-size: 3rem; font-weight: 800; color: #dc3545; }
+    body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; }
+    .hero-section {
+      background: linear-gradient(135deg, #0d6efd 0%, #00d4ff 100%);
+      color: white;
+      padding: 100px 0 80px;
+    }
+    .feature-icon {
+      font-size: 3rem;
+      color: #0d6efd;
+      margin-bottom: 15px;
+    }
+    .cta-btn {
+      font-size: 1.2rem;
+      padding: 15px 40px;
+      border-radius: 30px;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+    .cta-btn:hover { transform: translateY(-3px); }
+    .price-card {
+      border: 2px solid #0d6efd;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .price-header {
+      background: #0d6efd;
+      color: white;
+      padding: 20px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .step-box {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 20px;
+      height: 100%;
+      text-align: center;
+    }
+    /* フッターリンクのホバー時設定 */
+    .footer-link:hover { color: #fff !important; text-decoration: underline !important; }
   </style>
 </head>
 <body>
 
-  <header class="hero">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
     <div class="container">
-      <h1 class="hero-title">ランニングコストをゼロにする。<br>ひとり社長やスモールチーム専用 AI経費精算</h1>
-      <p class="lead text-muted mb-4">最新AI（Gemini）とGoogleスプレッドシートが直結。<br>買い切り8,000円で、固定費削減を実現する超・合理的ツール。</p>
-      
-      <a href="https://buy.stripe.com/test_3cIeVdbhr7bL8PVd8Hc7u01" class="btn btn-primary btn-lg buy-btn">
-        システムを購入する（税込み8,000円）<i class="bi bi-chevron-right ms-2"></i>
-      </a>
-      <p class="mt-3 small text-muted"><i class="bi bi-shield-check"></i> 3日間の全額返金保証付き</p>
+      <a class="navbar-brand fw-bold text-primary" href="#">Smart & Smooth</a>
+      <a href="#pricing" class="btn btn-primary rounded-pill fw-bold px-4">今すぐ導入する</a>
     </div>
-  </header>
+  </nav>
+
+  <section class="hero-section text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-4">スマホで撮るだけ。<br>AIが経費ログを自動化します。</h1>
+      <p class="lead mb-5">月額0円・買い切り型。Googleスプレッドシート×最新AI（Gemini）を活用した、<br class="d-none d-md-block">ひとり社長・小型法人・小型チーム向け経費ログシステム。</p>
+      <a href="#pricing" class="btn btn-light text-primary cta-btn">ライセンスを購入する <i class="bi bi-chevron-right"></i></a>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container text-center py-4">
+      <h2 class="fw-bold mb-4">こんなお悩みありませんか？</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-4">
+            <i class="bi bi-receipt text-danger fs-1 mb-3"></i>
+            <h5 class="fw-bold">領収書の入力が面倒</h5>
+            <p class="text-muted">日付、店名、金額、インボイス番号…手入力によるミスや手間が毎月発生している。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-4">
+            <i class="bi bi-cash-coin text-danger fs-1 mb-3"></i>
+            <h5 class="fw-bold">専用システムは高すぎる</h5>
+            <p class="text-muted">クラウド経費システムを導入したいが、毎月の従量課金や基本料がネックになっている。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-4">
+            <i class="bi bi-folder-x text-danger fs-1 mb-3"></i>
+            <h5 class="fw-bold">電帳法への対応が不安</h5>
+            <p class="text-muted">電子帳簿保存法に対応した画像保存と、改ざん防止（削除履歴）の仕組みが整っていない。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="py-5">
-    <div class="container">
-      <h2 class="text-center fw-bold mb-5">圧倒的なコストパフォーマンスと機能</h2>
-      <div class="row g-4 text-center">
-        <div class="col-md-4">
-          <i class="bi bi-camera feature-icon"></i>
-          <h4 class="fw-bold">AIが全自動入力</h4>
-          <p class="text-muted">スマホで領収書を撮るだけ。日付、店名、金額、内訳までAIが瞬時に読み取ります。</p>
-        </div>
-        <div class="col-md-4">
-          <i class="bi bi-car-front feature-icon"></i>
-          <h4 class="fw-bold">交通費・自家用車対応</h4>
-          <p class="text-muted">乗換案内からの金額入力や、ガソリン単価（円/km）を設定しての自動計算に対応。</p>
-        </div>
-        <div class="col-md-4">
-          <i class="bi bi-robot feature-icon"></i>
-          <h4 class="fw-bold">即時AI監査ブロック</h4>
-          <p class="text-muted">重複申請や金額の書き換えをAIが瞬時に検知し、管理者を不正やミスから守ります。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-5 bg-light text-center">
-    <div class="container">
-      <h2 class="fw-bold mb-3">SaaSのサブスク地獄から抜け出しませんか？</h2>
-      <p class="mb-4">月額数千円のサービスに課金し続ける必要はもうありません。<br>初期設定を自分で行うDIY型だからこそ実現できた、圧倒的な価格です。</p>
-      <div class="mb-4">
-        <span class="text-muted text-decoration-line-through fs-5">通常想定価格: 8,000円</span><br>
-        <span class="price-tag">先着100名様まで¥5,000</span><span class="fw-bold text-muted">（税込・買い切り）</span>
-      </div>
+    <div class="container py-4">
+      <h2 class="text-center fw-bold mb-5">圧倒的な3つの強み</h2>
       
-      <a href="https://buy.stripe.com/test_3cIeVdbhr7bL8PVd8Hc7u01" class="btn btn-primary btn-lg buy-btn mb-3">
-        システムを購入する <i class="bi bi-credit-card ms-2"></i>
-      </a>
-      <div class="alert alert-warning d-inline-block text-start mx-auto" style="max-width: 500px;">
-        <strong><i class="bi bi-info-circle-fill"></i> ご購入前にお読みください</strong><br>
-        <small>本製品はGoogleの無料枠を利用する「現状渡し」の買い切りツールです。永続的なサポートや無償アップデートは含まれません。もし自社に合わない場合は、ご購入から3日以内であれば無条件で全額返金（システム利用停止）いたします。</small>
+      <div class="row align-items-center mb-5">
+        <div class="col-md-6 order-md-2 mb-4 mb-md-0 text-center">
+          <img src="https://via.placeholder.com/400x300?text=App+Screenshot" alt="AI解析" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 order-md-1">
+          <h3 class="fw-bold">1. 最先端AIが領収書を瞬時に読み取り</h3>
+          <p class="text-muted fs-5">スマホのカメラで領収書を撮影するだけで、Googleの最新AI「Gemini」が日付、店名、金額、インボイス番号を自動抽出。入力の手間を90%削減します。</p>
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-5">
+        <div class="col-md-6 mb-4 mb-md-0 text-center">
+          <img src="https://via.placeholder.com/400x300?text=Zero+Running+Cost" alt="ランニングコストゼロ" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+          <h3 class="fw-bold">2. ランニングコスト「実質ゼロ」</h3>
+          <p class="text-muted fs-5">お客様自身のGoogleアカウント環境（スプレッドシートとDrive）を活用する分散型システム（BYOKモデル）を採用。何人で使っても、毎月のシステム利用料やAI課金は発生しません。</p>
+        </div>
+      </div>
+
+      <div class="row align-items-center">
+        <div class="col-md-6 order-md-2 mb-4 mb-md-0 text-center">
+          <img src="https://via.placeholder.com/400x300?text=Compliance" alt="電帳法対応" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 order-md-1">
+          <h3 class="fw-bold">3. 電子帳簿保存法にしっかり対応</h3>
+          <p class="text-muted fs-5">証票画像は改ざん検知用のハッシュ値と共に自動保存。さらに、データの削除や修正履歴を自動でログ化するため、法対応も安心です。</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="py-4 text-center bg-dark text-white">
+  <section id="pricing" class="py-5 bg-light">
+    <div class="container text-center py-4">
+      <h2 class="fw-bold mb-4">料金プラン</h2>
+      <p class="lead mb-5">初期費用のみ。社員数無制限でずっと使えます。</p>
+      
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+          <div class="price-card bg-white shadow-lg">
+            <div class="price-header">
+              買い切りライセンス
+            </div>
+            <div class="p-4">
+              <h3 class="display-5 fw-bold text-primary mb-3">¥29,800 <small class="fs-6 text-muted">/社 (税込)</small></h3>
+              <ul class="list-unstyled text-start mb-4 fs-5">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> ユーザー数・利用回数 無制限</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> スプレッドシートテンプレート付き</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> AI自動解析機能（Gemini API利用）</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> 交通費・自家用車精算機能</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> 電帳法対応（削除履歴ログ機能）</li>
+              </ul>
+              <a href="https://buy.stripe.com/test_3cIeVdbhr7bL8PVd8Hc7u01" target="_blank" class="btn btn-primary w-100 py-3 fw-bold fs-5 rounded-pill shadow-sm">
+                今すぐ購入する（Stripe決済）
+              </a>
+              <p class="small text-muted mt-3">※クレジットカード決済完了後、自動でライセンスキーと設定マニュアルがメールで送信されます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-4">
     <div class="container">
-      <small>&copy; 2026 Smart & Smooth. All rights reserved.</small>
+      <p class="mb-2">&copy; 2024 合同会社Smart&Smooth All Rights Reserved.</p>
+      <a href="https://smartandsmooth.com/privacy" target="_blank" class="text-white-50 text-decoration-none small footer-link">プライバシーポリシー</a>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
