@@ -3,20 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI経費ログシステム | スマホで撮るだけ、月額ゼロの業務効率化</title>
+  <title>AI経費ログポータル | ひとり社長・個人事業主・小規模チームのためのAI経費自動化</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
-    body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; }
+    body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; line-height: 1.6; }
     .hero-section {
       background: linear-gradient(135deg, #0d6efd 0%, #00d4ff 100%);
       color: white;
-      padding: 100px 0 80px;
-    }
-    .feature-icon {
-      font-size: 3rem;
-      color: #0d6efd;
-      margin-bottom: 15px;
+      padding: 80px 0;
     }
     .cta-btn {
       font-size: 1.2rem;
@@ -24,30 +19,22 @@
       border-radius: 30px;
       font-weight: bold;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      transition: transform 0.2s;
+      transition: 0.2s;
     }
     .cta-btn:hover { transform: translateY(-3px); }
     .price-card {
       border: 2px solid #0d6efd;
       border-radius: 16px;
-      overflow: hidden;
+      background: white;
     }
     .price-header {
       background: #0d6efd;
       color: white;
       padding: 20px;
       font-weight: bold;
-      font-size: 1.5rem;
     }
-    .step-box {
-      background: #f8f9fa;
-      border-radius: 12px;
-      padding: 20px;
-      height: 100%;
-      text-align: center;
-    }
-    /* フッターリンクのホバー時設定 */
     .footer-link:hover { color: #fff !important; text-decoration: underline !important; }
+    img.shadow-custom { box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 12px; }
   </style>
 </head>
 <body>
@@ -55,41 +42,42 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
     <div class="container">
       <a class="navbar-brand fw-bold text-primary" href="#">Smart & Smooth</a>
-      <a href="#pricing" class="btn btn-primary rounded-pill fw-bold px-4">今すぐ導入する</a>
+      <a href="#pricing" class="btn btn-primary rounded-pill fw-bold px-4">今すぐ導入</a>
     </div>
   </nav>
 
   <section class="hero-section text-center">
     <div class="container">
-      <h1 class="display-4 fw-bold mb-4">スマホで撮るだけ。<br>AIが経費ログを自動化します。</h1>
-      <p class="lead mb-5">月額0円・買い切り型。Googleスプレッドシート×最新AI（Gemini）を活用した、<br class="d-none d-md-block">ひとり社長・小型法人・小型チーム向け経費ログシステム。</p>
+      <span class="badge bg-white text-primary mb-3 px-3 py-2 fw-bold rounded-pill">ひとり社長・個人事業主・小規模法人・サークル向け</span>
+      <h1 class="display-5 fw-bold mb-4">スマホで撮るだけ。<br>AIが「経費ログ」を一瞬で作成。</h1>
+      <p class="lead mb-5 px-lg-5">面倒な経費入力をAIが代行。Googleスプレッドシートに自動集約。<br>高額な月額システムはもう不要です。</p>
       <a href="#pricing" class="btn btn-light text-primary cta-btn">ライセンスを購入する <i class="bi bi-chevron-right"></i></a>
     </div>
   </section>
 
-  <section class="py-5 bg-light">
+  <section class="py-5 bg-light border-bottom">
     <div class="container text-center py-4">
-      <h2 class="fw-bold mb-4">こんなお悩みありませんか？</h2>
+      <h2 class="fw-bold mb-5">こんな「入力作業」で時間を溶かしていませんか？</h2>
       <div class="row g-4 justify-content-center">
         <div class="col-md-4">
           <div class="card h-100 border-0 shadow-sm p-4">
-            <i class="bi bi-receipt text-danger fs-1 mb-3"></i>
-            <h5 class="fw-bold">領収書の入力が面倒</h5>
-            <p class="text-muted">日付、店名、金額、インボイス番号…手入力によるミスや手間が毎月発生している。</p>
+            <i class="bi bi-clock-history text-primary fs-1 mb-3"></i>
+            <h5 class="fw-bold">溜まった領収書の入力</h5>
+            <p class="text-muted small">月末にまとめて日付や店名をスプレッドシートへ手打ち。その時間、もっと別の仕事に使えませんか？</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card h-100 border-0 shadow-sm p-4">
-            <i class="bi bi-cash-coin text-danger fs-1 mb-3"></i>
-            <h5 class="fw-bold">専用システムは高すぎる</h5>
-            <p class="text-muted">クラウド経費システムを導入したいが、毎月の従量課金や基本料がネックになっている。</p>
+            <i class="bi bi-cash-stack text-primary fs-1 mb-3"></i>
+            <h5 class="fw-bold">月額費用のコスト負担</h5>
+            <p class="text-muted small">数人のチームに高い経費精算システムは不要。でも、無料だと機能が足りない…。</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card h-100 border-0 shadow-sm p-4">
-            <i class="bi bi-folder-x text-danger fs-1 mb-3"></i>
-            <h5 class="fw-bold">電帳法への対応が不安</h5>
-            <p class="text-muted">電子帳簿保存法に対応した画像保存と、改ざん防止（削除履歴）の仕組みが整っていない。</p>
+            <i class="bi bi-shield-check text-primary fs-1 mb-3"></i>
+            <h5 class="fw-bold">電帳法への対応漏れ</h5>
+            <p class="text-muted small">電子帳簿保存法が始まったけど、何をどう保存すればいいか分からない…。</p>
           </div>
         </div>
       </div>
@@ -98,35 +86,33 @@
 
   <section class="py-5">
     <div class="container py-4">
-      <h2 class="text-center fw-bold mb-5">圧倒的な3つの強み</h2>
-      
       <div class="row align-items-center mb-5">
         <div class="col-md-6 order-md-2 mb-4 mb-md-0 text-center">
-          <img src="https://via.placeholder.com/400x300?text=App+Screenshot" alt="AI解析" class="img-fluid rounded shadow">
+          <img src="img/app_screenshot.png" alt="アプリ画面" class="img-fluid shadow-custom">
         </div>
         <div class="col-md-6 order-md-1">
-          <h3 class="fw-bold">1. 最先端AIが領収書を瞬時に読み取り</h3>
-          <p class="text-muted fs-5">スマホのカメラで領収書を撮影するだけで、Googleの最新AI「Gemini」が日付、店名、金額、インボイス番号を自動抽出。入力の手間を90%削減します。</p>
+          <h2 class="fw-bold mb-3">1. 撮影から登録まで数秒</h2>
+          <p class="text-muted fs-5">専用Webアプリを開いて撮影するだけ。Googleの最新AIが日付・店名・金額・インボイス番号を自動抽出。確認してボタンを押せば、あなたのスプレッドシートに即時反映されます。</p>
         </div>
       </div>
 
       <div class="row align-items-center mb-5">
         <div class="col-md-6 mb-4 mb-md-0 text-center">
-          <img src="https://via.placeholder.com/400x300?text=Zero+Running+Cost" alt="ランニングコストゼロ" class="img-fluid rounded shadow">
+          <img src="img/sheet_screenshot.png" alt="スプレッドシート連動" class="img-fluid shadow-custom">
         </div>
         <div class="col-md-6">
-          <h3 class="fw-bold">2. ランニングコスト「実質ゼロ」</h3>
-          <p class="text-muted fs-5">お客様自身のGoogleアカウント環境（スプレッドシートとDrive）を活用する分散型システム（BYOKモデル）を採用。何人で使っても、毎月のシステム利用料やAI課金は発生しません。</p>
+          <h2 class="fw-bold mb-3">2. ずっと月額0円。買い切りモデル</h2>
+          <p class="text-muted fs-5">お客様自身のGoogleアカウントのパワー（API・ドライブ）を活用する仕組みにより、メーカー側への継続的な支払いは一切なし。何人で使ってもランニングコストは実質ゼロです。</p>
         </div>
       </div>
 
       <div class="row align-items-center">
         <div class="col-md-6 order-md-2 mb-4 mb-md-0 text-center">
-          <img src="https://via.placeholder.com/400x300?text=Compliance" alt="電帳法対応" class="img-fluid rounded shadow">
+          <img src="img/folder_screenshot.png" alt="電帳法対応" class="img-fluid shadow-custom">
         </div>
         <div class="col-md-6 order-md-1">
-          <h3 class="fw-bold">3. 電子帳簿保存法にしっかり対応</h3>
-          <p class="text-muted fs-5">証票画像は改ざん検知用のハッシュ値と共に自動保存。さらに、データの削除や修正履歴を自動でログ化するため、法対応も安心です。</p>
+          <h2 class="fw-bold mb-3">3. 電帳法対応のログ保存</h2>
+          <p class="text-muted fs-5">画像は改ざん防止用のハッシュ値と共に自動保存されます。さらに「誰がいつデータを消したか」の削除ログ機能も標準搭載。小規模チームのコンプライアンスを守ります。</p>
         </div>
       </div>
     </div>
@@ -134,28 +120,28 @@
 
   <section id="pricing" class="py-5 bg-light">
     <div class="container text-center py-4">
-      <h2 class="fw-bold mb-4">料金プラン</h2>
-      <p class="lead mb-5">初期費用のみ。社員数無制限でずっと使えます。</p>
+      <h2 class="fw-bold mb-2">料金プラン</h2>
+      <p class="lead mb-5 text-muted">複雑なプランはありません。これひとつで完結。</p>
       
       <div class="row justify-content-center">
         <div class="col-md-6 col-lg-5">
-          <div class="price-card bg-white shadow-lg">
-            <div class="price-header">
-              買い切りライセンス
+          <div class="price-card shadow-lg">
+            <div class="price-header fs-4">
+              AI経費ログポータル ライセンス
             </div>
             <div class="p-4">
-              <h3 class="display-5 fw-bold text-primary mb-3">¥8,000 <small class="fs-6 text-muted">/社・チーム (税込)</small></h3>
-              <ul class="list-unstyled text-start mb-4 fs-5">
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> ユーザー数・利用回数 無制限</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> スプレッドシートテンプレート付き</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> AI自動解析機能（Gemini API利用）</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> 交通費・自家用車精算機能</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i> 電帳法対応（削除履歴ログ機能）</li>
+              <h3 class="display-5 fw-bold text-primary mb-3">¥29,800 <small class="fs-6 text-muted">/社 (税込)</small></h3>
+              <ul class="list-unstyled text-start mb-4 fs-6">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> ユーザー数・登録件数 <strong>無制限</strong></li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> 独自ドメイン不要・即日導入可能</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> 管理用スプレッドシート・テンプレート付</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> AI自動解析・交通費・自家用車精算</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> 電帳法対応（削除履歴ログ保存）</li>
               </ul>
-              <a href="https://buy.stripe.com/test_3cIeVdbhr7bL8PVd8Hc7u01" target="_blank" class="btn btn-primary w-100 py-3 fw-bold fs-5 rounded-pill shadow-sm">
-                今すぐ購入する（Stripe決済）
+              <a href="https://buy.stripe.com/test_3cIeVdbhr7bL8PVd8Hc7u01" target="_blank" class="btn btn-primary w-100 py-3 fw-bold fs-5 rounded-pill">
+                Stripeで購入する
               </a>
-              <p class="small text-muted mt-3">※クレジットカード決済完了後、自動でライセンスキーと設定マニュアルがメールで送信されます。</p>
+              <p class="small text-muted mt-3 text-start">※ご購入後、ライセンスキーと初期設定手順をメールにて自動送信いたします。Googleアカウントがあればすぐにご利用いただけます。</p>
             </div>
           </div>
         </div>
