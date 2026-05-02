@@ -24,14 +24,34 @@
     .cta-btn:hover { transform: translateY(-3px); }
     .price-card {
       border: 2px solid #0d6efd;
-      border-radius: 16px;
+      border-radius: 24px;
       background: white;
+      position: relative;
     }
     .price-header {
       background: #0d6efd;
       color: white;
       padding: 20px;
       font-weight: bold;
+      border-radius: 20px 20px 0 0;
+    }
+    .campaign-badge {
+      position: absolute;
+      top: -15px;
+      right: -10px;
+      background: #ffc107;
+      color: #000;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transform: rotate(5deg);
+      z-index: 10;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 1.2rem;
     }
     .footer-link:hover { color: #fff !important; text-decoration: underline !important; }
     img.shadow-custom { box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 12px; }
@@ -105,16 +125,6 @@
           <p class="text-muted fs-5">お客様自身のGoogleアカウントのパワー（API・ドライブ）を活用する仕組みにより、メーカー側への継続的な支払いは一切なし。何人で使ってもランニングコストは実質ゼロです。</p>
         </div>
       </div>
-
-      <div class="row align-items-center">
-        <div class="col-md-6 order-md-2 mb-4 mb-md-0 text-center">
-          <img src="img/folder_screenshot.png" alt="電帳法対応" class="img-fluid shadow-custom">
-        </div>
-        <div class="col-md-6 order-md-1">
-          <h2 class="fw-bold mb-3">3. 電帳法対応のログ保存</h2>
-          <p class="text-muted fs-5">画像は改ざん防止用のハッシュ値と共に自動保存されます。さらに「誰がいつデータを消したか」の削除ログ機能も標準搭載。小規模チームのコンプライアンスを守ります。</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -126,20 +136,32 @@
       <div class="row justify-content-center">
         <div class="col-md-6 col-lg-5">
           <div class="price-card shadow-lg">
+            <div class="campaign-badge">
+              <i class="bi bi-megaphone-fill"></i> 先着100名様限定！
+            </div>
+            
             <div class="price-header fs-4">
               AI経費ログポータル ライセンス
             </div>
-            <div class="p-4">
-              <h3 class="display-5 fw-bold text-primary mb-3">¥29,800 <small class="fs-6 text-muted">/社 (税込)</small></h3>
+            <div class="p-4 pt-5">
+              <div class="mb-1">
+                <span class="old-price">通常価格 ¥8,000</span>
+              </div>
+              <div class="mb-4">
+                <h3 class="display-4 fw-bold text-danger mb-0">¥5,000 <small class="fs-6 text-muted">(税込)</small></h3>
+                <p class="text-danger fw-bold small mt-1">※リリース記念キャンペーン実施中</p>
+              </div>
+
               <ul class="list-unstyled text-start mb-4 fs-6">
                 <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> ユーザー数・登録件数 <strong>無制限</strong></li>
                 <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> 独自ドメイン不要・即日導入可能</li>
                 <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> 管理用スプレッドシート・テンプレート付</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> AI自動解析・交通費・自家用車精算</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> AI自動解析・交通費・自家用車ログ作成</li>
                 <li><i class="bi bi-check-circle-fill text-success me-2"></i> 電帳法対応（削除履歴ログ保存）</li>
               </ul>
-              <a href="https://buy.stripe.com/test_3cIeVdbhr7bL8PVd8Hc7u01" target="_blank" class="btn btn-primary w-100 py-3 fw-bold fs-5 rounded-pill">
-                Stripeで購入する
+
+              <a href="https://buy.stripe.com/test_3cIeVdbhr7bL8PVd8Hc7u01" target="_blank" class="btn btn-primary w-100 py-3 fw-bold fs-5 rounded-pill shadow">
+                この価格で手に入れる
               </a>
               <p class="small text-muted mt-3 text-start">※ご購入後、ライセンスキーと初期設定手順をメールにて自動送信いたします。Googleアカウントがあればすぐにご利用いただけます。</p>
             </div>
