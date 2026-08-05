@@ -21,5 +21,33 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
+  <!-- カフェ経営会計シミュレーション -->
+  <url>
+    <loc>https://smartandsmooth.com/cafe-sim/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://smartandsmooth.com/cafe-sim/ogp.jpg</image:loc>
+      <image:title>カフェ経営会計シミュレーション</image:title>
+    </image:image>
+  </url>
+
+  <!-- AI経費ログWebアプリ -->
+  <url>
+    <loc>https://smartandsmooth.com/product/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 継承 ― 会計シミュレーション -->
+  <url>
+    <loc>https://smartandsmooth.com/mg/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

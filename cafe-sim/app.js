@@ -8,6 +8,16 @@ const STAGGER_MS   = 550;  // ms — delay between each account animation
 const MIN_BLOCK_PX = 26;   // px — minimum height for non-zero balance blocks
 
 // ================================================================
+// Analytics (GA4) — 送信先タグが無い環境では黙って何もしない
+// ================================================================
+const trackedSteps = new Set();  // 同一セッションでの重複送信を防ぐ
+
+function track(eventName, params) {
+  if (typeof gtag !== 'function') return;
+  gtag('event', eventName, params || {});
+}
+
+// ================================================================
 // State
 // ================================================================
 function makeInitialBalances() {
@@ -344,6 +354,7 @@ function runForwardAnimation(prevBal, newBal, newTotals, changedAccounts, onComp
 // ================================================================
 function startApp() {
   D.introOverlay.classList.add('hidden');
+  track('sim_start', { total_steps: STEPS.length });
   loadStep(1);
 }
 
@@ -434,6 +445,16 @@ function executeCurrentStep() {
   };
   state.stepExecuted = true;
 
+  // 何ステップ目まで到達したか（1ステップにつき1回だけ送信）
+  if (!trackedSteps.has(step.id)) {
+    trackedSteps.add(step.id);
+    track('sim_step', {
+      step_number: step.id,
+      step_title:  step.title,
+      phase:       step.phase,
+    });
+  }
+
   // Compute scale from new balances (kept in state.balances = newBalances)
   const newTotals = computeTotals();
 
@@ -486,6 +507,7 @@ function goToPrevStep() {
 }
 
 function resetApp() {
+  track('sim_reset', {});
   state.balances        = makeInitialBalances();
   state.currentStep     = 0;
   state.stepExecuted    = false;
@@ -530,6 +552,7 @@ function toggleExplanation() {
   const isHidden = D.explanation.classList.contains('hidden');
   D.explanation.classList.toggle('hidden', !isHidden);
   D.btnExplain.textContent = isHidden ? '解説を閉じる ▲' : '解説を見る ▼';
+  if (isHidden) track('sim_explanation_open', { step_number: state.currentStep });
 }
 
 // ================================================================
@@ -769,6 +792,12 @@ function showSummary() {
     '<div class="summary-item"><span>総資産</span><strong>' + fmtNum(t.bsLeft) + '万円</strong></div>' +
     '<div class="summary-item"><span>当期純利益</span>' +
     '<strong class="' + cls + '">' + pre + fmtNum(Math.abs(net)) + '万円（' + word + '）</strong></div>';
+
+  track('sim_complete', {
+    total_steps:   STEPS.length,
+    total_assets:  t.bsLeft,
+    net_income:    net,
+  });
 
   D.summaryOverlay.classList.remove('hidden');
 }
