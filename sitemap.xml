@@ -34,20 +34,6 @@
     </image:image>
   </url>
 
-  <!-- AI経費ログWebアプリ -->
-  <url>
-    <loc>https://smartandsmooth.com/product/</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- 継承 ― 会計シミュレーション -->
-  <url>
-    <loc>https://smartandsmooth.com/mg/</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <!-- /product/ と /mg/ はテスト中のため、意図的にサイトマップへ載せていない -->
 
 </urlset>
