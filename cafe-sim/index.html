@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VB7F17M5ZF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-VB7F17M5ZF');
-  </script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>カフェ経営会計シミュレーション</title>
@@ -148,6 +138,45 @@
       <li>💡 各取引の会計解説付き</li>
     </ul>
     <button id="btn-start" class="btn btn-execute">開始する</button>
+  </div>
+</div>
+
+<!-- ========== TUTORIAL OVERLAY ========== -->
+<div id="tutorial-overlay" class="hidden">
+  <div class="overlay-card tutorial-card">
+    <div class="overlay-icon">☕</div>
+    <h2>遊び方</h2>
+    <ul class="tutorial-list">
+      <li>
+        <span class="tutorial-num">01</span>
+        <div>
+          <strong>あなたはカフェを開業します</strong><br>
+          開業準備からオープン1ヶ月後の決算まで、<br>15の取引が順番に起こります。
+        </div>
+      </li>
+      <li>
+        <span class="tutorial-num">02</span>
+        <div>
+          <strong>取引を実行する前に想像してみましょう</strong><br>
+          「この取引でBSとPLはどう変わるか？」を<br>予想してから「実行する」を押してください。
+        </div>
+      </li>
+      <li>
+        <span class="tutorial-num">03</span>
+        <div>
+          <strong>グラフの変化をリアルタイムで確認</strong><br>
+          実行すると貸借対照表・損益計算書が<br>即座に動きます。
+        </div>
+      </li>
+      <li>
+        <span class="tutorial-num">04</span>
+        <div>
+          <strong>わからなければ解説を確認</strong><br>
+          各取引に会計のポイント解説があります。<br>何度でも読み返せます。
+        </div>
+      </li>
+    </ul>
+    <button id="btn-tutorial-start" class="btn btn-execute">さっそく始める →</button>
   </div>
 </div>
 
