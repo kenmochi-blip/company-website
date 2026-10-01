@@ -872,6 +872,137 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
 }
 
+/* 動画のかわりに置いた、カフェ経営会計シミュレーションへの入口 */
+.sim-thumb {
+    display: block;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.sim-thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.sim-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-weight: 700;
+    color: var(--primary-deep);
+    text-decoration: none;
+}
+
+.sim-link:hover {
+    text-decoration: underline;
+}
+
+/* 提供ツール（経費ログ・医療費ログ・カフェ経営会計シミュレーション） */
+.tools {
+    background: #f8faff;
+    padding: 80px 0;
+}
+
+.tool-list {
+    max-width: 760px;
+    margin: 0 auto;
+    display: grid;
+    gap: 24px;
+}
+
+.tool-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.tool-head {
+    background: var(--primary-gradient);
+    padding: 28px 36px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tool-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.tool-icon-fa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: var(--primary-deep);
+    font-size: 1.4rem;
+}
+
+.tool-name {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.tool-sub {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.85rem;
+    margin-top: 2px;
+}
+
+.tool-body {
+    padding: 28px 36px;
+}
+
+.tool-body p {
+    color: var(--gray-700);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.tool-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.tool-tags span {
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.tool-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.tool-btn i {
+    margin-left: 6px;
+}
+
+@media (max-width: 575px) {
+    .tool-head,
+    .tool-body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 .programs-custom {
     margin-top: 4rem;
 }

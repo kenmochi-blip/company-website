@@ -57,15 +57,24 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://smartandsmooth.com/#org",
       "name": "Smart & Smooth",
+      "alternateName": ["合同会社Smart & Smooth", "合同会社Smart&Smooth", "Smart & Smooth LLC"],
       "description": "マネジメントゲーム（MG）研修・法人向け会計研修サービス",
       "url": "https://smartandsmooth.com",
       "logo": "https://smartandsmooth.com/images/favicon.png",
       "founder": {
         "@type": "Person",
+        "@id": "https://smartandsmooth.com/#profile",
         "name": "剱持 健",
+        "alternateName": ["剱持健", "けんもち たけし", "Takeshi Kenmochi"],
         "jobTitle": "代表 / 公認会計士",
-        "description": "元・上場企業副社長、IPO実現の当事者"
+        "description": "元・上場企業副社長、IPO実現の当事者",
+        "url": "https://smartandsmooth.com/#profile",
+        "sameAs": [
+          "https://iryouhi.keihi-log.com/about#kenmochi",
+          "https://www.pwc.com/jp/ja/alumni/interview21.html"
+        ]
       },
       "contactPoint": {
         "@type": "ContactPoint",
@@ -74,10 +83,7 @@
         "url": "https://smartandsmooth.com/#contact"
       },
       "areaServed": "JP",
-      "serviceType": ["マネジメントゲーム研修", "会計研修", "経営研修", "財務研修"],
-      "sameAs": [
-        "https://www.pwc.com/jp/ja/alumni/interview21.html"
-      ]
+      "serviceType": ["マネジメントゲーム研修", "会計研修", "経営研修", "財務研修"]
     }
     </script>
     
@@ -143,9 +149,6 @@
                 <a href="#about">強みとは</a>
                 <a href="#programs">研修プログラム</a>
                 <a href="#profile">講師紹介</a>
-                <a href="trial/" target="_blank" rel="noopener noreferrer" class="nav-trial">
-                    <i class="fas fa-chess"></i> マネジメントゲーム体験会
-                </a>
                 <a href="#contact" class="nav-cta">無料相談</a>
             </nav>
             <button class="mobile-menu-toggle">
@@ -163,9 +166,6 @@
             <a href="#about">強みとは</a>
             <a href="#programs">研修プログラム</a>
             <a href="#profile">講師紹介</a>
-            <a href="trial/" target="_blank" rel="noopener noreferrer" class="mobile-nav-trial">
-                <i class="fas fa-chess"></i> マネジメントゲーム体験会
-            </a>
             <a href="#contact">お問い合わせ</a>
         </nav>
     </div>
@@ -325,7 +325,7 @@
                         </h3>
                         <p class="strength-description">
                             講師は、監査法人で「外から」企業を見るだけでなく、自ら事業会社に専務・副社長として入り、「中から」経営に携わりました。<br>
-                            債務超過の状態から社内プロセスを整備し、副社長として<strong>IPO（東証マザーズ上場）を実現させた「当事者」</strong>です。<br><br>
+                            債務超過の状態から社内プロセスを整備し、副社長として<strong>株式上場（IPO）を実現させた「当事者」</strong>です。<br><br>
                             「管理部門が現場でぶつかる壁」「上場審査で求められる数字のレベル」「管理職が持つべき経営感覚」──。その全てを実体験として知っているからこそ、本番で本当に役立つ、血の通った研修を提供できます。
                         </p>
                     </div>
@@ -435,13 +435,6 @@
                         </div>
                     </div>
 
-                    <div class="program-experience">
-                        <p><i class="fas fa-user"></i> どのような研修かまずは体験してみたい、という方はマネジメントゲーム体験（個人向け1日研修）にぜひご参加ください。</p>
-                        <a href="trial/" target="_blank" rel="noopener noreferrer" class="btn btn-trial">
-                            <i class="fas fa-external-link-alt"></i> マネジメントゲーム体験会の詳細を見る
-                        </a>
-                    </div>
-
                     <a href="#contact" class="btn btn-outline">このコースについて相談する</a>
                 </div>
 
@@ -463,17 +456,12 @@
                     </div>
 
                     <div class="program-video">
-                        <h4><i class="fas fa-play-circle"></i> 5分で会計が体験できる！</h4>
-                        <p class="video-caption">【5分で会計】カフェ経営シミュレーション</p>
-                        <div class="video-wrapper">
-                            <iframe 
-                                src="https://www.youtube.com/embed/ZGWgsKMelpw" 
-                                title="カフェ経営シミュレーション" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                            </iframe>
-                        </div>
+                        <h4><i class="fas fa-mug-hot"></i> ブラウザで会計を体験できる！</h4>
+                        <p class="video-caption">カフェ経営会計シミュレーション — 開業から決算まで、取引を1つ進めるたびにB/SとP/Lがどう動くかを体験できます（無料・登録不要）</p>
+                        <a href="/cafe-sim/" class="sim-thumb" target="_blank" rel="noopener">
+                            <img src="/cafe-sim/ogp.jpg" alt="カフェ経営会計シミュレーション" width="1376" height="768" loading="lazy">
+                        </a>
+                        <a href="/cafe-sim/" class="sim-link" target="_blank" rel="noopener">シミュレーターを開く <i class="fas fa-arrow-right"></i></a>
                     </div>
 
                     <div class="program-recommended">
@@ -503,34 +491,77 @@
         </div>
     </section>
 
-    <!-- 提供ツール：経費ログ -->
-    <section style="background:#f8faff;padding:80px 0;" id="tools">
+    <!-- 提供ツール -->
+    <section class="tools" id="tools">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title scroll-fade-in">提供ツール</h2>
-                <p class="section-subtitle scroll-fade-in">研修と並行して、業務効率化を支えるWebツールも開発・提供しています。</p>
+                <p class="section-subtitle scroll-fade-in">研修と並行して、会計を体験して学べる教材と、業務の手間を減らすWebツールを開発・提供しています。</p>
             </div>
-            <div class="scroll-fade-in" style="max-width:760px;margin:0 auto;background:#fff;border-radius:16px;box-shadow:0 2px 20px rgba(0,0,0,.08);overflow:hidden;">
-                <div style="background:var(--primary-gradient);padding:28px 36px 24px;">
-                    <div style="display:flex;align-items:center;gap:12px;">
-                        <img src="https://keihi-log.com/icons/icon-192.png" alt="経費ログ" style="width:48px;height:48px;border-radius:10px;flex-shrink:0;">
+            <div class="tool-list">
+                <div class="tool-card scroll-fade-in">
+                    <div class="tool-head">
+                        <img class="tool-icon" src="https://keihi-log.com/icons/icon-192.png" alt="経費ログ">
                         <div>
-                            <div style="color:#fff;font-size:1.4rem;font-weight:700;line-height:1.2;">経費ログ</div>
-                            <div style="color:rgba(255,255,255,.8);font-size:0.85rem;margin-top:2px;">Google スプレッドシート連携の経費精算Webアプリ</div>
+                            <div class="tool-name">経費ログ</div>
+                            <div class="tool-sub">Google スプレッドシート連携の経費精算Webアプリ</div>
                         </div>
                     </div>
-                </div>
-                <div style="padding:28px 36px;">
-                    <p style="color:var(--gray-700);line-height:1.8;margin-bottom:20px;">領収書をスマホで撮影してアップロードするだけで、AIが金額・日付・支払先を自動入力。経費データはGoogleスプレッドシートに蓄積されるため、データを外部業者に預けることなく、低コストで電子帳簿保存法に対応した経費精算を実現します。</p>
-                    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;">
-                        <span style="background:#eff6ff;color:#1d4ed8;padding:4px 12px;border-radius:20px;font-size:0.82rem;font-weight:600;">AI領収書解析</span>
-                        <span style="background:#eff6ff;color:#1d4ed8;padding:4px 12px;border-radius:20px;font-size:0.82rem;font-weight:600;">電帳法対応</span>
-                        <span style="background:#eff6ff;color:#1d4ed8;padding:4px 12px;border-radius:20px;font-size:0.82rem;font-weight:600;">Googleスプレッドシート連携</span>
-                        <span style="background:#eff6ff;color:#1d4ed8;padding:4px 12px;border-radius:20px;font-size:0.82rem;font-weight:600;">ソロ月額330円〜</span>
+                    <div class="tool-body">
+                        <p>領収書をスマホで撮影してアップロードするだけで、AIが金額・日付・支払先を自動入力。経費データはGoogleスプレッドシートに蓄積されるため、データを外部業者に預けることなく、低コストで電子帳簿保存法に対応した経費精算を実現します。</p>
+                        <div class="tool-tags">
+                            <span>AI領収書解析</span>
+                            <span>電帳法対応</span>
+                            <span>Googleスプレッドシート連携</span>
+                            <span>ソロ月額330円〜</span>
+                        </div>
+                        <a href="https://keihi-log.com" target="_blank" rel="noopener" class="btn-primary tool-btn">
+                            詳細・無料トライアル <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
-                    <a href="https://keihi-log.com" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block;padding:12px 28px;border-radius:8px;color:#fff;font-weight:700;text-decoration:none;font-size:0.95rem;">
-                        詳細・無料トライアル <i class="fas fa-arrow-right" style="margin-left:6px;"></i>
-                    </a>
+                </div>
+
+                <div class="tool-card scroll-fade-in">
+                    <div class="tool-head">
+                        <img class="tool-icon" src="https://iryouhi.keihi-log.com/icons/icon-192.png" alt="医療費ログ">
+                        <div>
+                            <div class="tool-name">医療費ログ</div>
+                            <div class="tool-sub">領収書を撮るだけで、医療費控除の明細ができる無料ツール</div>
+                        </div>
+                    </div>
+                    <div class="tool-body">
+                        <p>病院や薬局の領収書をスマホで撮ると、AIが日付・医療機関・金額を読み取り、ご自身のGoogleスプレッドシートに家族ごとに貯めていきます。確定申告では、国税庁の「医療費集計フォーム」として書き出し、確定申告書等作成コーナーにそのまま読み込めます。</p>
+                        <div class="tool-tags">
+                            <span>AI領収書読取</span>
+                            <span>家族ごとに集計</span>
+                            <span>医療費集計フォームで書き出し</span>
+                            <span>無料</span>
+                        </div>
+                        <a href="https://iryouhi.keihi-log.com/" target="_blank" rel="noopener" class="btn-primary tool-btn">
+                            詳細・無料ではじめる <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card scroll-fade-in">
+                    <div class="tool-head">
+                        <span class="tool-icon tool-icon-fa"><i class="fas fa-mug-hot"></i></span>
+                        <div>
+                            <div class="tool-name">カフェ経営会計シミュレーション</div>
+                            <div class="tool-sub">B/SとP/Lの動きを、カフェの開業から決算までで体験する教材</div>
+                        </div>
+                    </div>
+                    <div class="tool-body">
+                        <p>自己資金の投入、銀行からの借入、内装工事、開店後の売上、減価償却まで、カフェ経営の取引を1つずつ進めると、そのたびに貸借対照表（B/S）と損益計算書（P/L）がどう動くかが目の前で分かります。研修でも使っている教材を、ブラウザでそのままお試しいただけます。</p>
+                        <div class="tool-tags">
+                            <span>B/SとP/Lの連動</span>
+                            <span>ワークシートPDFつき</span>
+                            <span>無料・登録不要</span>
+                        </div>
+                        <a href="/cafe-sim/" target="_blank" rel="noopener" class="btn-primary tool-btn">
+                            シミュレーターを開く <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -622,7 +653,7 @@
                     <p class="profile-title">
                         合同会社Smart & Smooth 代表社員<br>
                         公認会計士 / 戦略MGマネジメントゲーム認定インストラクター<br>
-                        <span class="profile-additional">（株式会社日本アクア、日本化学工業株式会社 社外取締役）</span>
+                        <span class="profile-additional">（上場会社の社外役員を兼任）</span>
                     </p>
                     
                     <div class="profile-vision">
@@ -635,7 +666,7 @@
                         <p>
                             東京大学経済学部卒業後、<strong>PwC京都監査法人</strong>に入所。公認会計士として企業を「外から」見る視点を培う。<br><br>
                             2012年に独立後、金融機関と企業の間に立ち、上場準備や事業再生で成果を上げる。<br><br>
-                            2017年、（株）タカヨシに専務取締役として参画。債務超過の状態から「中から」ビジネスプロセスを整備し、2021年、<strong>代表取締役副社長としてIPO（東証マザーズ上場）を実現</strong>。<br><br>
+                            その後、事業会社に専務取締役として参画。債務超過の状態から「中から」ビジネスプロセスを整備し、<strong>副社長として株式上場（IPO）を実現</strong>。<br><br>
                             「監査法人（理論）」「事業会社（実践）」「研修講師（教育）」の３つの視点を持ち、2023年に再独立。「エデュテイナー」として、経営や会計について楽しく学べる場作りに邁進している。
                         </p>
                     </div>
@@ -655,7 +686,7 @@
                         </div>
                         <div class="credential">
                             <i class="fas fa-rocket"></i>
-                            <span>IPO実現（東証マザーズ上場）</span>
+                            <span>IPO実現（事業会社の副社長として）</span>
                         </div>
                     </div>
                 </div>
