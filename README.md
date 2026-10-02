@@ -33,8 +33,6 @@ smartandsmooth/
 │   │   └── style.css
 │   └── js/
 │       └── script.js
-├── google-apps-script/          # Google Apps Script
-│   └── updateFormChoices.gs
 └── README.md                    # このファイル
 ```
 

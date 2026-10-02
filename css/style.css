@@ -1444,6 +1444,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.125rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    /* 見出しの既定色(濃紺)のままだと、同じ濃紺の背景に溶けて読めない */
+    color: var(--white);
 }
 
 .footer-links {
@@ -1465,6 +1467,13 @@ h1, h2, h3, h4, h5, h6 {
 .footer-info p {
     color: var(--gray-400);
     line-height: 1.6;
+}
+
+/* 会社としての軸。代表者名より先に、白で少し強く出す */
+.footer-info .footer-mission {
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
 .footer-bottom {
